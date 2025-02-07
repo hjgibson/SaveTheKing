@@ -686,6 +686,11 @@ PrefabInstance:
       objectReference: {fileID: 1286727232}
     - target: {fileID: 4328967503494010513, guid: f4e90f66c0973964fa88b5c032d0d397,
         type: 3}
+      propertyPath: firingRate
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328967503494010513, guid: f4e90f66c0973964fa88b5c032d0d397,
+        type: 3}
       propertyPath: partToRotate
       value: 
       objectReference: {fileID: 1181304795}
