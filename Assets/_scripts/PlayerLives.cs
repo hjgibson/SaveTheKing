@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerLives : MonoBehaviour
 {
-    public static int Lives;
-    public int startLives = 20;
+    public static int Health;
+    public int startHealth = 100;
 
     private void Start()
     {
-        Lives = startLives;
+        Health = startHealth;
     }
 }
