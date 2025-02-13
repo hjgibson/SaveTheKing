@@ -119,3 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  enemyDamage: 3
+  health: 200
+  YellowSlime: {fileID: 0}
+  RedSlime: {fileID: 755857399481222118}
+  BlueSlime: {fileID: 0}
