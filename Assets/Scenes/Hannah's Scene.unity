@@ -681,6 +681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4328967503494010513, guid: f4e90f66c0973964fa88b5c032d0d397,
         type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328967503494010513, guid: f4e90f66c0973964fa88b5c032d0d397,
+        type: 3}
       propertyPath: firePoint
       value: 
       objectReference: {fileID: 1286727232}
@@ -1406,8 +1411,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845877202}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13075097, y: 0.8278098, z: -0.21606268, w: -0.50095123}
-  m_LocalPosition: {x: 4.8210344, y: 5.7865534, z: 3.8463366}
+  m_LocalRotation: {x: -0.4844964, y: 0.007957697, z: -0.00440748, w: -0.874746}
+  m_LocalPosition: {x: -0.24207859, y: 16.666302, z: -10.496625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
