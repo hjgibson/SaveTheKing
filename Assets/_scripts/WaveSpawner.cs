@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public static int EnemiesAlive = 0;
     public Transform enemyPrefab;
 
     public Transform spawnPoint;
@@ -16,6 +17,7 @@ public class WaveSpawner : MonoBehaviour
     private int waveNumber = 0;
     void Update()
     {
+
         if (countdown <= 0f)
         {
             SpawnWave();
@@ -38,5 +40,6 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemies()
     {
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        EnemiesAlive++;
     }
 }
