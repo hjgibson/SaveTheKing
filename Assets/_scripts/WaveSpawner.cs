@@ -48,6 +48,13 @@ public class WaveSpawner : MonoBehaviour
         }
         
         waveNumber++;
+
+        //when player reaches end of level activate scene switch to next level
+        if (waveNumber == waves.Length)
+        {
+            Debug.Log("Level Complete");
+            this.enabled = false;
+        }
     }
     void SpawnEnemies (GameObject enemy)
     {
