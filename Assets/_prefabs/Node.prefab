@@ -118,6 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf4bd16605683747892ea40722d1a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positionOffset: {x: 1, y: 0.5, z: 1}
   hoverColor: {r: 1, g: 1, b: 1, a: 0}
-  towerPrefab: {fileID: 96302004765844239, guid: f4e90f66c0973964fa88b5c032d0d397,
-    type: 3}

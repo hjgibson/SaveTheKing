@@ -6,13 +6,16 @@ using UnityEngine.UI;
 
 public class Node : MonoBehaviour
 {
+    public Vector3 positionOffset;
+
     public Color hoverColor;
 
     private Renderer rend;
 
     private Color startColor;
 
-    public GameObject towerPrefab;
+    private GameObject towerPrefab;
+
 
     private void Start()
     {
@@ -35,12 +38,14 @@ public class Node : MonoBehaviour
         if (towerPrefab != null)
         {
             Debug.Log("Can't Build There!");
-            Instantiate(towerPrefab, Input.mousePosition, Quaternion.identity );
+            
             return;
         }
+        GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
+        towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset , transform.rotation);
 
         ///building the turret 
-       // Instantiate(gameObject.)
-     //  Instantiate(tower);
+        // Instantiate(gameObject.)
+        //  Instantiate(tower);
     }
 }
