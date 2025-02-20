@@ -1475,78 +1475,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1397982212
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1397982213}
-  - component: {fileID: 1397982214}
-  m_Layer: 0
-  m_Name: waveSpawner (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1397982213
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397982212}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.67, y: 1.08341, z: 10.131702}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2089446521}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1397982214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397982212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d0e12dfc191ad478291b7526dd5453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - blueEnemy: {fileID: 0}
-    redEnemy: {fileID: 0}
-    yellowEnemy: {fileID: 0}
-    count: 1
-    rate: 1
-  - blueEnemy: {fileID: 0}
-    redEnemy: {fileID: 0}
-    yellowEnemy: {fileID: 0}
-    count: 1
-    rate: 1
-  - blueEnemy: {fileID: 0}
-    redEnemy: {fileID: 0}
-    yellowEnemy: {fileID: 0}
-    count: 2
-    rate: 1
-  - blueEnemy: {fileID: 0}
-    redEnemy: {fileID: 0}
-    yellowEnemy: {fileID: 0}
-    count: 3
-    rate: 1
-  - blueEnemy: {fileID: 0}
-    redEnemy: {fileID: 0}
-    yellowEnemy: {fileID: 0}
-    count: 4
-    rate: 1
-  spawnPoint: {fileID: 1397982213}
-  timeBetweenWaves: 3
 --- !u!1 &1455515432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,78 +1725,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1598243232
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1598243233}
-  - component: {fileID: 1598243234}
-  m_Layer: 0
-  m_Name: waveSpawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1598243233
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598243232}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.67, y: 1.08341, z: 10.131702}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2089446521}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1598243234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598243232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d0e12dfc191ad478291b7526dd5453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - blueEnemy: {fileID: 0}
-    redEnemy: {fileID: 0}
-    yellowEnemy: {fileID: 0}
-    count: 1
-    rate: 1
-  - blueEnemy: {fileID: 0}
-    redEnemy: {fileID: 0}
-    yellowEnemy: {fileID: 0}
-    count: 3
-    rate: 1
-  - blueEnemy: {fileID: 0}
-    redEnemy: {fileID: 0}
-    yellowEnemy: {fileID: 0}
-    count: 5
-    rate: 1
-  - blueEnemy: {fileID: 0}
-    redEnemy: {fileID: 0}
-    yellowEnemy: {fileID: 0}
-    count: 7
-    rate: 1
-  - blueEnemy: {fileID: 0}
-    redEnemy: {fileID: 0}
-    yellowEnemy: {fileID: 0}
-    count: 9
-    rate: 1
-  spawnPoint: {fileID: 1598243233}
-  timeBetweenWaves: 3
 --- !u!1 &1803853596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,12 +1830,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1187353185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2089446521 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1677595594925789863, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
-    type: 3}
-  m_PrefabInstance: {fileID: 3577801099075095788}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3577801099075095788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2061,22 +1911,22 @@ PrefabInstance:
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
       propertyPath: waves.Array.data[2].rate
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
       propertyPath: waves.Array.data[3].rate
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
       propertyPath: waves.Array.data[4].rate
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
       propertyPath: waves.Array.data[0].count
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
@@ -2087,7 +1937,7 @@ PrefabInstance:
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
       propertyPath: waves.Array.data[1].count
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
@@ -2098,7 +1948,7 @@ PrefabInstance:
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
       propertyPath: waves.Array.data[2].count
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
@@ -2109,7 +1959,7 @@ PrefabInstance:
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
       propertyPath: waves.Array.data[3].count
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4826785605872462851, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
         type: 3}
@@ -2222,15 +2072,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 9045234421365016063, guid: 35fa8b66dff654d4f8415cb3af1b0dbe, type: 3}
     - {fileID: 904450721878951400, guid: 35fa8b66dff654d4f8415cb3af1b0dbe, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1677595594925789863, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1598243233}
-    - targetCorrespondingSourceObject: {fileID: 1677595594925789863, guid: 35fa8b66dff654d4f8415cb3af1b0dbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1397982213}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35fa8b66dff654d4f8415cb3af1b0dbe, type: 3}
 --- !u!1001 &5023057528384501571
