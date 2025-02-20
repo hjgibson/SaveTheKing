@@ -43,7 +43,9 @@ public class WaveSpawner : MonoBehaviour
         Debug.Log("Wave Incoming");
         for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnemies(wave.enemy);
+            SpawnEnemiesBlue(wave.blueEnemy);
+            SpawnEnemiesYellow(wave.yellowEnemy);
+            SpawnEnemiesRed(wave.redEnemy);
             yield return new WaitForSeconds(1f / wave.rate);
         }
         
@@ -56,9 +58,25 @@ public class WaveSpawner : MonoBehaviour
             this.enabled = false;
         }
     }
-    void SpawnEnemies (GameObject enemy)
+    void SpawnEnemiesBlue (GameObject blueEnemy)
     {
-        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(blueEnemy, spawnPoint.position, spawnPoint.rotation);
+       
+
+        EnemiesAlive++;
+    }
+    void SpawnEnemiesYellow (GameObject yellowEnemy)
+    {
+        
+        Instantiate(yellowEnemy, spawnPoint.position, spawnPoint.rotation);
+        
+
+        EnemiesAlive++;
+    }
+    void SpawnEnemiesRed (GameObject redEnemy)
+    {
+        Instantiate(redEnemy, spawnPoint.position, spawnPoint.rotation);
+
         EnemiesAlive++;
     }
 }
