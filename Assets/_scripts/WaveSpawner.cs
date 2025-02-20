@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public Transform enemyPrefab;
+    public static int EnemiesAlive = 0;
+    //public Transform enemyPrefab;
+    public Wave[] waves;
 
     public Transform spawnPoint;
 
@@ -16,27 +18,65 @@ public class WaveSpawner : MonoBehaviour
     private int waveNumber = 0;
     void Update()
     {
+        if (EnemiesAlive > 0)
+        {
+            return;
+        }
+
         if (countdown <= 0f)
         {
-            SpawnWave();
+            StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
+            return;
         }
 
         countdown -= Time.deltaTime;
 
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
     }
 
-    void SpawnWave()
+    IEnumerator SpawnWave()
     {
+
+        Wave wave = waves[waveNumber];
+
         Debug.Log("Wave Incoming");
-        for (int i = 0; i < waveNumber; i++)
+        for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnemies();
+            SpawnEnemiesBlue(wave.blueEnemy);
+            SpawnEnemiesYellow(wave.yellowEnemy);
+            SpawnEnemiesRed(wave.redEnemy);
+            yield return new WaitForSeconds(1f / wave.rate);
         }
+        
         waveNumber++;
+
+        //when player reaches end of level activate scene switch to next level
+        if (waveNumber == waves.Length)
+        {
+            Debug.Log("Level Complete");
+            this.enabled = false;
+        }
     }
-    void SpawnEnemies()
+    void SpawnEnemiesBlue (GameObject blueEnemy)
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(blueEnemy, spawnPoint.position, spawnPoint.rotation);
+       
+
+        EnemiesAlive++;
+    }
+    void SpawnEnemiesYellow (GameObject yellowEnemy)
+    {
+        
+        Instantiate(yellowEnemy, spawnPoint.position, spawnPoint.rotation);
+        
+
+        EnemiesAlive++;
+    }
+    void SpawnEnemiesRed (GameObject redEnemy)
+    {
+        Instantiate(redEnemy, spawnPoint.position, spawnPoint.rotation);
+
+        EnemiesAlive++;
     }
 }

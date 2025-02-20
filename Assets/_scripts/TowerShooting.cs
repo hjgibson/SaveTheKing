@@ -6,9 +6,13 @@ public class TowerShooting : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
+
     public float firingRate = 1f;
 
     public Transform target;
+
+    private float fireCountdown = 0.5f;
+
     public float range = 7f;
     public string enemyTag = "Enemy";
     public Transform partToRotate;
@@ -20,13 +24,39 @@ public class TowerShooting : MonoBehaviour
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
+    /// <summary>
+    /// updating the enemy target, allowing lock on within a certain range 
+    /// </summary>
+
+    void UpdateTarget()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestEnemy = null;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distanceToEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestEnemy = enemy;
+            }
+        }
+
+        if (nearestEnemy != null && shortestDistance <= range)
+        {
+            target = nearestEnemy.transform;
+        }
+    }
     private void Update()
     {
         if(target == null)
         { return; }
         if(!isFiring)
         {
-            StartCoroutine(WaitTime());
+          //   StartCoroutine(WaitTime());
         }
 
         Vector3 dir = target.position - transform.position;
@@ -36,6 +66,13 @@ public class TowerShooting : MonoBehaviour
         //TowerShot();
 
 
+        if (fireCountdown <= 0)
+        {
+            TowerShot();
+            fireCountdown = 1f / firingRate;
+        }
+        fireCountdown -= Time.deltaTime;
+
     }
 
     /// <summary>
@@ -43,11 +80,22 @@ public class TowerShooting : MonoBehaviour
     /// </summary>
     private void TowerShot()
     {
-        Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        
+
+        GameObject bulletGo = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGo.GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            bullet.Seek(target);
+        }
         //StartCoroutine(WaitTime());
 
     }
-
+    /// <summary>
+    /// waits for time in between bullets 
+    /// </summary>
+    /// <returns></returns>
     IEnumerator WaitTime()
     {
         isFiring = true;
@@ -56,38 +104,18 @@ public class TowerShooting : MonoBehaviour
         
         isFiring = false;
 
-        TowerShot();
+    
        
         Debug.Log("waiting to shoot bullet");
     }
-
+    /// <summary>
+    /// to draw the AOE so that we can visualize it 
+    /// </summary>
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
 
     }
-    /// <summary>
-    /// updating the enemy target, allowing lock on within a certain range 
-    /// </summary>
-    private void UpdateTarget()
-    {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-        float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null;
-        foreach (GameObject enemy in enemies)
-        {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if(distanceToEnemy < shortestDistance)
-            {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
-            }
-        }
-
-        if(nearestEnemy != null && shortestDistance <= range)
-        {
-            target = nearestEnemy.transform;
-        }
-    }
+   
 }
