@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,19 +17,24 @@ public class Node : MonoBehaviour
 
     private GameObject towerPrefab;
 
-  //  public int currentTowerCount;
 
-   // public int maxTowers;
+    private Cooldown cooldown = null;
 
-   // public GameObject tower2Prefab;
+    //  public int currentTowerCount;
+
+    // public int maxTowers;
+
+    // public GameObject tower2Prefab;
 
 
     private void Start()
     {
-
+        cooldown = BuildManager.instance.GetCooldown();
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
     }
+
+   
     private void OnMouseEnter()
     {
         rend.material.color = hoverColor;
@@ -39,7 +45,8 @@ public class Node : MonoBehaviour
         rend.material.color = startColor;
     }
 
-    private void OnMouseDown()
+    
+   private void OnMouseDown()
     {
         //  currentTowerCount++;
         //  if(currentTowerCount == maxTowers)
@@ -49,18 +56,32 @@ public class Node : MonoBehaviour
         //   return;
         //  }
 
+        if (cooldown.IsCoolingDown()) return;
 
         if (towerPrefab != null)
         {
             Debug.Log("Can't Build There!");
-            
+
             return;
         }
-       GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
-        towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset , transform.rotation);
+        GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
+        towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+
+        cooldown.StartCooldown();
+        //GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
+        // towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+
+
+
+
+
+
+
+
 
         ///building the turret 
-       // Instantiate(gameObject.);
+        // Instantiate(gameObject.);
         // Instantiate(tower);
     }
+
 }
