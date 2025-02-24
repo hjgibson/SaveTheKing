@@ -118,5 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf4bd16605683747892ea40722d1a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionOffset: {x: 1, y: 0.5, z: 1}
+  positionOffset: {x: 1, y: 3, z: 2}
   hoverColor: {r: 1, g: 1, b: 1, a: 0}

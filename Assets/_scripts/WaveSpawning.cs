@@ -21,10 +21,19 @@ public class WaveSpawning : MonoBehaviour
 
     private int waveNumber = 0;
 
-    
+    private float Timer = 0;
+
+
 
     void Update()
     {
+        Timer += Time.deltaTime;
+
+        if (UIManager.instance != null)
+        {
+            UIManager.instance.UpdateTimer(Timer);
+        }
+
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
@@ -36,6 +45,11 @@ public class WaveSpawning : MonoBehaviour
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
        
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0f; // Freezes the game
     }
 
     /// <summary>
@@ -56,9 +70,29 @@ public class WaveSpawning : MonoBehaviour
     /// </summary>
     public void SpawnEnemy()
     {
-        Instantiate(enemy1Prefab, spawnPoint.position, spawnPoint.rotation);
-    }
+        int randomEnemy = Random.Range(0, 3); // Generates a random number between 0 and 2
 
+        Transform enemyToSpawn;
+
+        switch (randomEnemy)
+        {
+            case 0:
+                enemyToSpawn = enemy1Prefab;
+                break;
+            case 1:
+                enemyToSpawn = enemy2Prefab;
+                break;
+            case 2:
+                enemyToSpawn = enemy3Prefab;
+                break;
+            default:
+                enemyToSpawn = enemy1Prefab; 
+                break;
+        }
+
+        Instantiate(enemyToSpawn, spawnPoint.position, spawnPoint.rotation);
+    }
+    
 
 
 
