@@ -55,6 +55,7 @@ public class Enemy : MonoBehaviour
     void EndPath ()
     {
         PlayerLives.Health -= enemyDamage;
+
         WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
      
