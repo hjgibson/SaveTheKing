@@ -18,7 +18,6 @@ public class ScreenManager : MonoBehaviour
     //switches scenes
     public void SwitchScene(int buildIndex)
     {
-        Time.timeScale = 1.0f;
         SceneManager.LoadScene(buildIndex);
 
     }
