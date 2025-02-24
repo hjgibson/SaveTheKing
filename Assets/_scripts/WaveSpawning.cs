@@ -10,7 +10,9 @@ using TMPro;
 public class WaveSpawning : MonoBehaviour
 {
 
-    public Transform enemyPrefab;
+    public Transform enemy1Prefab; 
+    public Transform enemy2Prefab;
+    public Transform enemy3Prefab;
 
     public Transform spawnPoint;
 
@@ -19,7 +21,7 @@ public class WaveSpawning : MonoBehaviour
 
     private int waveNumber = 0;
 
-    public TMP_Text countdownText;
+    
 
     void Update()
     {
@@ -33,7 +35,7 @@ public class WaveSpawning : MonoBehaviour
         //countdown can't be negative
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
-        countdownText.text = string.Format("{0:00.00}", countdown);
+       
     }
 
     /// <summary>
@@ -54,7 +56,7 @@ public class WaveSpawning : MonoBehaviour
     /// </summary>
     public void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy1Prefab, spawnPoint.position, spawnPoint.rotation);
     }
 
 
