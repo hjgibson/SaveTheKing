@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
 
+    [SerializeField] private Cooldown cooldown;
+
+
+
     private void Awake()
     {
-        if( instance != null)
+        cooldown = new Cooldown(3);
+        if ( instance != null)
         {
             Debug.Log("more than one in the scene!");
             return;
@@ -19,13 +25,20 @@ public class BuildManager : MonoBehaviour
 
     private void Start()
     {
-        turretToBuild = standarTurretPrefab;
+            turretToBuild = standarTurretPrefab;
+        
     }
 
     private GameObject turretToBuild;
 
     public GameObject getTurretToBuild()
     {
-        return turretToBuild;
+       
+    return turretToBuild;
+     
     }
+
+    public Cooldown GetCooldown() => cooldown;
+    
+
 }

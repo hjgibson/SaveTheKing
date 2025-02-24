@@ -120,7 +120,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionOffset: {x: 1, y: 0.5, z: 1}
   hoverColor: {r: 1, g: 1, b: 1, a: 0}
-  currentTowerCount: 0
-  maxTowers: 2
-  tower2Prefab: {fileID: 3702475371705743076, guid: 73e85a7a8a10c0a4696a10d8cacc1012,
-    type: 3}
+  cooldown:
+    cooldownTime: 3
