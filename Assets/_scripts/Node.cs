@@ -16,6 +16,12 @@ public class Node : MonoBehaviour
 
     private GameObject towerPrefab;
 
+  //  public int currentTowerCount;
+
+   // public int maxTowers;
+
+   // public GameObject tower2Prefab;
+
 
     private void Start()
     {
@@ -35,17 +41,26 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //  currentTowerCount++;
+        //  if(currentTowerCount == maxTowers)
+        // {
+        //    GameObject secondTurret = Instantiate(tower2Prefab, transform.position + positionOffset, transform.rotation);
+        //   Destroy(GameObject.FindGameObjectWithTag("Tower1"));
+        //   return;
+        //  }
+
+
         if (towerPrefab != null)
         {
             Debug.Log("Can't Build There!");
             
             return;
         }
-        GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
+       GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
         towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset , transform.rotation);
 
         ///building the turret 
-        // Instantiate(gameObject.)
-        //  Instantiate(tower);
+       // Instantiate(gameObject.);
+        // Instantiate(tower);
     }
 }
