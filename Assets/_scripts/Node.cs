@@ -20,6 +20,10 @@ public class Node : MonoBehaviour
 
     private Cooldown cooldown = null;
 
+    private bool firstClick = false;
+
+    private Vector3 selectedPosition;
+
     //  public int currentTowerCount;
 
     // public int maxTowers;
@@ -65,9 +69,40 @@ public class Node : MonoBehaviour
             return;
         }
         GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
-        towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+        Debug.Log("Is this the place you want to build?");
+        //towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+     
+        
+        // Check if it's the first click
+        if (!firstClick)
+        {
+            // First click: Select the position for tower placement
+            
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
-        cooldown.StartCooldown();
+            if (Physics.Raycast(ray, out hit))
+            {
+                selectedPosition = hit.point; 
+                firstClick = true;             
+                Debug.Log("Position selected! Click again to confirm placement.");
+            }
+        }
+        else
+        {
+            // Second click: Place the tower at the selected position
+            if(towerPrefab == null)
+            {
+                towerPrefab = Instantiate(turretToBuild, selectedPosition + positionOffset, transform.rotation);
+                cooldown.StartCooldown(); 
+
+                Debug.Log("CoolDown started! wait a few seconds");
+
+                firstClick = false; 
+                Debug.Log("Tower placed at " + selectedPosition);
+            }
+         
+        }
         //GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
         // towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
 
