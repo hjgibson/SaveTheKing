@@ -11,10 +11,11 @@ public class LivesUI : MonoBehaviour
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI cooldownText;
 
-    private void Start()
+    public void Start()
     {
         cooldown = new Cooldown(10f);
         cooldown.StartCooldown();
+        
     }
     private void Update()
     {
@@ -34,5 +35,10 @@ public class LivesUI : MonoBehaviour
        
 
         // CooldownText.text = "Tower Cooldown" + GetComponent<BuildManager>().cooldown.ToString();
+    }
+
+    public void RestartCooldown()
+    {
+        cooldown.StartCooldown();
     }
 }
