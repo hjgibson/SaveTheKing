@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
-using UnityEditor.ShaderGraph.Internal;
+//using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class gridGenerator : MonoBehaviour
