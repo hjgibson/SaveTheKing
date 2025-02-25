@@ -7,19 +7,13 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
 
-    [SerializeField] private Cooldown cooldown;
+    private Cooldown cooldown;
 
 
 
     private void Awake()
     {
-        cooldown = new Cooldown(3);
-        if ( instance != null)
-        {
-            Debug.Log("more than one in the scene!");
-            return;
-        }
-        instance = this; 
+        CooldownTime();
     }
     public GameObject standarTurretPrefab;
 
@@ -39,6 +33,17 @@ public class BuildManager : MonoBehaviour
     }
 
     public Cooldown GetCooldown() => cooldown;
+
+    public void CooldownTime()
+    {
+        cooldown = new Cooldown(10);
+        if (instance != null)
+        {
+            Debug.Log("more than one in the scene!");
+            return;
+        }
+        instance = this;
+    }
     
 
 }

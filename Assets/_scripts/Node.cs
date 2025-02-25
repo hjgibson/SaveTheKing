@@ -60,7 +60,7 @@ public class Node : MonoBehaviour
         //   return;
         //  }
 
-        if (cooldown.IsCoolingDown()) return;
+       if (cooldown.IsCoolingDown()) return;
 
         if (towerPrefab != null)
         {
@@ -94,7 +94,9 @@ public class Node : MonoBehaviour
             if(towerPrefab == null)
             {
                 towerPrefab = Instantiate(turretToBuild, selectedPosition + positionOffset, transform.rotation);
-                cooldown.StartCooldown(); 
+                cooldown.StartCooldown();
+                LivesUI livesUI = FindObjectOfType<LivesUI>();
+                livesUI.RestartCooldown();
 
                 Debug.Log("CoolDown started! wait a few seconds");
 
@@ -105,6 +107,9 @@ public class Node : MonoBehaviour
         }
         //GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
         // towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+
+        
+        
 
 
 
