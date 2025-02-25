@@ -41,12 +41,12 @@ public class Node : MonoBehaviour
    
     private void OnMouseEnter()
     {
-        rend.material.color = hoverColor;
+       // rend.material.color = hoverColor;
     }
 
     private void OnMouseExit()
     {
-        rend.material.color = startColor;
+      //  rend.material.color = startColor;
     }
 
     
@@ -77,7 +77,8 @@ public class Node : MonoBehaviour
         if (!firstClick)
         {
             // First click: Select the position for tower placement
-            
+            rend.material.color = hoverColor;
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -86,17 +87,21 @@ public class Node : MonoBehaviour
                 selectedPosition = hit.point; 
                 firstClick = true;             
                 Debug.Log("Position selected! Click again to confirm placement.");
+                
             }
         }
         else
         {
+            rend.material.color = startColor;
             // Second click: Place the tower at the selected position
-            if(towerPrefab == null)
+            if (towerPrefab == null)
             {
                 towerPrefab = Instantiate(turretToBuild, selectedPosition + positionOffset, transform.rotation);
                 cooldown.StartCooldown();
                 LivesUI livesUI = FindObjectOfType<LivesUI>();
                 livesUI.RestartCooldown();
+
+                
 
                 Debug.Log("CoolDown started! wait a few seconds");
 
