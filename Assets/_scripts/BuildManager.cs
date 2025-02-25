@@ -7,7 +7,7 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
 
-    public Cooldown cooldown;
+    private Cooldown cooldown;
 
 
 
@@ -36,7 +36,7 @@ public class BuildManager : MonoBehaviour
 
     public void CooldownTime()
     {
-        cooldown = new Cooldown(3);
+        cooldown = new Cooldown(10);
         if (instance != null)
         {
             Debug.Log("more than one in the scene!");

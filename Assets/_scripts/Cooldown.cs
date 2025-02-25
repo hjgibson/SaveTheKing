@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Cooldown : MonoBehaviour 
+public class Cooldown 
 {
 
     public float cooldownTime;
-    private float _nextSpawnTime;
+    public float _nextSpawnTime;
 
     public Cooldown(float cooldownTime)
     {
         this.cooldownTime = cooldownTime;
+        _nextSpawnTime = 0;
     }
     public bool IsCoolingDown()
     {
@@ -24,9 +25,10 @@ public class Cooldown : MonoBehaviour
         
         _nextSpawnTime = Time.time + cooldownTime;
     }
-
-    private void OnGUI()
+    public float GetRemainingCooldownTime()
     {
-        GUI.Label(new Rect(100, 40, 200, 20), "Cooling Down" + cooldownTime);
+        return Mathf.Max(0f, _nextSpawnTime - Time.time); // Return the remaining time, or 0 if the cooldown is done
     }
+
+
 }

@@ -60,7 +60,7 @@ public class Node : MonoBehaviour
         //   return;
         //  }
 
-        if (cooldown.IsCoolingDown()) return;
+       if (cooldown.IsCoolingDown()) return;
 
         if (towerPrefab != null)
         {
@@ -105,6 +105,9 @@ public class Node : MonoBehaviour
         }
         //GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
         // towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+
+        
+        
 
 
 
