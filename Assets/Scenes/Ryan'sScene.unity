@@ -3490,6 +3490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthText: {fileID: 357382755}
+  countdownText: {fileID: 0}
 --- !u!1001 &358679241
 PrefabInstance:
   m_ObjectHideFlags: 0

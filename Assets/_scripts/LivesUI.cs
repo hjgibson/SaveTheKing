@@ -6,10 +6,13 @@ using TMPro;
 
 public class LivesUI : MonoBehaviour
 {
+   
     public TextMeshProUGUI HealthText;
+    public TextMeshProUGUI CooldownText;
 
     private void Update()
     {
-        HealthText.text = PlayerLives.Health.ToString() + " HEALTH";
+        HealthText.text = "HEALTH " + PlayerLives.Health.ToString();
+        CooldownText.text = "Tower Cooldown" + GetComponent<BuildManager>().cooldown.ToString();
     }
 }
