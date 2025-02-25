@@ -39,15 +39,15 @@ public class Node : MonoBehaviour
     }
 
    
-   // private void OnMouseEnter()
-  //  {
-    //    rend.material.color = hoverColor;
-   // }
+    private void OnMouseEnter()
+    {
+        rend.material.color = hoverColor;
+    }
 
-   // private void OnMouseExit()
-   // {
-   //     rend.material.color = startColor;
-    //}
+    private void OnMouseExit()
+    {
+        rend.material.color = startColor;
+    }
 
     
    private void OnMouseDown()
@@ -84,8 +84,7 @@ public class Node : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 selectedPosition = hit.point; 
-                firstClick = true;
-                rend.material.color = hoverColor;
+                firstClick = true;             
                 Debug.Log("Position selected! Click again to confirm placement.");
             }
         }
@@ -99,8 +98,7 @@ public class Node : MonoBehaviour
 
                 Debug.Log("CoolDown started! wait a few seconds");
 
-                firstClick = false;
-                rend.material.color = startColor;
+                firstClick = false; 
                 Debug.Log("Tower placed at " + selectedPosition);
             }
          
