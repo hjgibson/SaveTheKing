@@ -4,31 +4,66 @@ using UnityEngine;
 
 public class Merge : MonoBehaviour
 {
+    public GameObject tower1Prefab;
     public GameObject tower2Prefab;
-    public Transform towerPosition;
 
-    // Start is called before the first frame update
-    void Start()
+
+
+    private bool isDragging = false;
+    public Vector3 offset;
+
+
+
+    private void OnMouseDown()
     {
-
+        isDragging = true;
+        offset = transform.position - MouseWorldPosition();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDrag()
     {
-
+        if (isDragging)
+        {
+            Vector3 newMousePosition = MouseWorldPosition();
+            transform.position = new Vector3(newMousePosition.x+ offset.x, transform.position.y, newMousePosition.z + offset.z);
+        }
     }
+
+    private void OnMouseUp()
+    {
+        isDragging = false;
+     
+   
+    }
+
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Tower1"))
+        if (collision.gameObject.tag == ("Tower1"))
         {
-
-            Destroy(this.gameObject);
-            Destroy(gameObject);
-
-            Debug.Log("NEW TOWER 2");
+            Debug.Log("tower1 detected");
+            MergeTowers();
+            Destroy(collision.gameObject);
         }
+        
+    }
+
+    private Vector3 MouseWorldPosition()
+    {
+        Vector3 mousePos = Input.mousePosition;
+
+        mousePos.z = Camera.main.ScreenToWorldPoint(transform.position).z;
+
+        return Camera.main.ScreenToWorldPoint(mousePos);
+    }
+    private void MergeTowers()
+    {
+        //  Vector3 currentPosition = transform.position;
+        //    Quaternion currentRotation = transform.rotation;
+
+        Instantiate(tower2Prefab, transform.position, transform.rotation);
+        Destroy(this.gameObject);
+        //  Destroy(gameObject);
     }
 }
 
