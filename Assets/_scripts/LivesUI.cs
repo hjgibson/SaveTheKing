@@ -10,6 +10,7 @@ public class LivesUI : MonoBehaviour
     private Cooldown cooldown;
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI cooldownText;
+    public TextMeshProUGUI ScoreText;
 
     public void Start()
     {
@@ -31,6 +32,8 @@ public class LivesUI : MonoBehaviour
         {
             Debug.Log("not working");
         }
+
+        ScoreText.text = "Score " + PlayerStats.Points.ToString();
         //cooldownTimerText.text = "Cooldown: " + Mathf.Ceil(remainingTime).ToString() + "s";
        
 
