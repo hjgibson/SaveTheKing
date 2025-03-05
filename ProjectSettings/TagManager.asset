@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Undefined
   - Enemy
+  - Bullet
+  - Path
+  - Tower1
+  - Tower2
   layers:
   - Default
   - TransparentFX
