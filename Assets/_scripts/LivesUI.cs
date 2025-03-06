@@ -22,7 +22,7 @@ public class LivesUI : MonoBehaviour
     {
         HealthText.text = "HEALTH " + PlayerLives.Health.ToString();
 
-        //float remainingTime = cooldown.GetRemainingCooldownTime();
+        
 
         if (cooldown != null )
         {
@@ -34,10 +34,7 @@ public class LivesUI : MonoBehaviour
         }
 
         ScoreText.text = "Score " + PlayerStats.Points.ToString();
-        //cooldownTimerText.text = "Cooldown: " + Mathf.Ceil(remainingTime).ToString() + "s";
-       
-
-        // CooldownText.text = "Tower Cooldown" + GetComponent<BuildManager>().cooldown.ToString();
+     
     }
 
     public void RestartCooldown()
