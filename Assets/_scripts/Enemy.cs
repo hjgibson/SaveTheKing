@@ -7,8 +7,12 @@ public class Enemy : MonoBehaviour
     public float speed = 10f;
     public int enemyDamage;
     public int health = 100;
+    public int Points = 0;
     private Transform target;
     private int wavepointIndex = 0;
+   
+    public int pointamount;
+
    
 
     void Start ()
@@ -25,9 +29,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()
+    void Die ()
     {
         WaveSpawner.EnemiesAlive--;
+        PlayerStats.Points += pointamount;
         Destroy(gameObject);
     }
     void Update ()
@@ -55,8 +60,11 @@ public class Enemy : MonoBehaviour
     void EndPath ()
     {
         PlayerLives.Health -= enemyDamage;
+
         WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
      
     }
+
+   
 }
