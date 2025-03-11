@@ -10,10 +10,10 @@ public class LivesUI : MonoBehaviour
     private Cooldown cooldown;
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI cooldownText;
-
+    private Image cooldownUI;
     public void Start()
     {
-        cooldown = new Cooldown(10f);
+        cooldown = new Cooldown(10f, cooldownUI);
         cooldown.StartCooldown();
         
     }
