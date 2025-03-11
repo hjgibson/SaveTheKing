@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class BuildManager : MonoBehaviour
 
     private Cooldown cooldown;
 
-
+    public Image cooldownImage;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class BuildManager : MonoBehaviour
     private void Start()
     {
             turretToBuild = standarTurretPrefab;
+        cooldown = new Cooldown(10); //cooldownImage);
         
     }
 
@@ -44,6 +46,12 @@ public class BuildManager : MonoBehaviour
         }
         instance = this;
     }
-    
 
+    private void Update()
+    {
+        if(cooldown != null && cooldown.IsCoolingDown())
+        {
+            cooldown.UpdateCooldownUI();
+        }
+    }
 }
