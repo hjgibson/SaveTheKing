@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public float startHealth = 100;
     private float health;
     public int Points = 0;
-    private Transform target;
+    private Transform path;
     private int wavepointIndex = 0;
     
     private Transform enemyTransform;
@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
 
     void Start ()
     {
-        target = Waypoints.waypoint[0];
+        path = Waypoints.waypoint[0];
         enemyTransform = transform;
         health = startHealth;
     }
@@ -44,10 +44,10 @@ public class Enemy : MonoBehaviour
     }
     void Update ()
     {
-        Vector3 dir = target.position - transform.position;
+        Vector3 dir = path.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
-        if (Vector3.Distance(transform.position, target.position) <= 0.2f)
+        if (Vector3.Distance(transform.position, path.position) <= 0.2f)
         {
             GetNextWaypoint();
         }
@@ -63,12 +63,12 @@ public class Enemy : MonoBehaviour
             return;
         }
         wavepointIndex++;
-        target = Waypoints.waypoint[wavepointIndex];
+        path = Waypoints.waypoint[wavepointIndex];
     }
 
     void LookAtWaypoint()
     {
-        Vector3 directionToWaypoint = target.position - enemyTransform.position;
+        Vector3 directionToWaypoint = path.position - enemyTransform.position;
 
         Quaternion targetRotation = Quaternion.LookRotation(directionToWaypoint);
 
