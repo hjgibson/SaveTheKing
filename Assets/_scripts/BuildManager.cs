@@ -21,7 +21,7 @@ public class BuildManager : MonoBehaviour
     private void Start()
     {
             turretToBuild = standarTurretPrefab;
-        cooldown = new Cooldown(10, cooldownImage);
+        cooldown = new Cooldown(10); //cooldownImage);
         
     }
 
@@ -38,7 +38,7 @@ public class BuildManager : MonoBehaviour
 
     public void CooldownTime()
     {
-        cooldown = new Cooldown(10, cooldownImage);
+        cooldown = new Cooldown(10);
         if (instance != null)
         {
             Debug.Log("more than one in the scene!");

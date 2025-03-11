@@ -14,7 +14,7 @@ public class LivesUI : MonoBehaviour
 
     public void Start()
     {
-        cooldown = new Cooldown(10f);
+     //   cooldown = new Cooldown(10f);
         cooldown.StartCooldown();
         
     }
