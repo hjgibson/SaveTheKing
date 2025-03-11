@@ -22,7 +22,10 @@ public class Node : MonoBehaviour
 
     private bool firstClick = false;
 
-    private Vector3 selectedPosition;
+    public static Node selectedNode;
+   
+
+    public Transform spawnPoint;
 
     //  public int currentTowerCount;
 
@@ -76,27 +79,26 @@ public class Node : MonoBehaviour
         // Check if it's the first click
         if (!firstClick)
         {
+            if(selectedNode != null && selectedNode != this)
+            {
+                selectedNode.rend.material.color = selectedNode.startColor;
+                selectedNode.firstClick = false;
+            }
             // First click: Select the position for tower placement
             rend.material.color = hoverColor;
+            selectedNode = this;
+            firstClick = true;
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+            Debug.Log("Position selected! Click again to confirm placement.");
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                selectedPosition = hit.point; 
-                firstClick = true;             
-                Debug.Log("Position selected! Click again to confirm placement.");
-                
-            }
         }
-        else
+        else if(selectedNode == this)
         {
             rend.material.color = startColor;
             // Second click: Place the tower at the selected position
             if (towerPrefab == null)
             {
-                towerPrefab = Instantiate(turretToBuild, selectedPosition + positionOffset, transform.rotation);
+                towerPrefab = Instantiate(turretToBuild, spawnPoint.position + positionOffset, transform.rotation);
                 cooldown.StartCooldown();
                 LivesUI livesUI = FindObjectOfType<LivesUI>();
                 livesUI.RestartCooldown();
@@ -106,7 +108,7 @@ public class Node : MonoBehaviour
                 Debug.Log("CoolDown started! wait a few seconds");
 
                 firstClick = false; 
-                Debug.Log("Tower placed at " + selectedPosition);
+             //   Debug.Log("Tower placed at " + selectedPosition);
             }
          
         }
