@@ -10,10 +10,11 @@ public class LivesUI : MonoBehaviour
     private Cooldown cooldown;
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI cooldownText;
-    private Image cooldownUI;
+    public TextMeshProUGUI ScoreText;
+
     public void Start()
     {
-        cooldown = new Cooldown(10f, cooldownUI);
+     //   cooldown = new Cooldown(10f);
         cooldown.StartCooldown();
         
     }
@@ -21,20 +22,13 @@ public class LivesUI : MonoBehaviour
     {
         HealthText.text = "HEALTH " + PlayerLives.Health.ToString();
 
-        //float remainingTime = cooldown.GetRemainingCooldownTime();
+        
 
-        if (cooldown != null )
-        {
-            cooldownText.text = "Cooldown: " + Mathf.Ceil(cooldown.GetRemainingCooldownTime()).ToString() + "s"; // Show remaining time
-        }
-        else
-        {
-            Debug.Log("not working");
-        }
-        //cooldownTimerText.text = "Cooldown: " + Mathf.Ceil(remainingTime).ToString() + "s";
-       
+        cooldownText.text = "Cooldown: " + Mathf.Ceil(cooldown.GetRemainingCooldownTime()).ToString() + "s"; // Show remaining time
+      
 
-        // CooldownText.text = "Tower Cooldown" + GetComponent<BuildManager>().cooldown.ToString();
+        ScoreText.text = "Score " + PlayerStats.Points.ToString();
+     
     }
 
     public void RestartCooldown()
