@@ -24,14 +24,8 @@ public class LivesUI : MonoBehaviour
 
         
 
-        if (cooldown != null )
-        {
-            cooldownText.text = "Cooldown: " + Mathf.Ceil(cooldown.GetRemainingCooldownTime()).ToString() + "s"; // Show remaining time
-        }
-        else
-        {
-            Debug.Log("not working");
-        }
+        cooldownText.text = "Cooldown: " + Mathf.Ceil(cooldown.GetRemainingCooldownTime()).ToString() + "s"; // Show remaining time
+      
 
         ScoreText.text = "Score " + PlayerStats.Points.ToString();
      

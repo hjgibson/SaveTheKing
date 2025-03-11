@@ -1,28 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public float speed = 10f;
     public int enemyDamage;
-    public int health = 100;
+    public float startHealth = 100;
+    private float health;
     public int Points = 0;
-    private Transform target;
+    private Transform path;
     private int wavepointIndex = 0;
-   
+    
+    private Transform enemyTransform;
     public int pointamount;
 
-   
+    public Image healthBar;
 
     void Start ()
     {
-        target = Waypoints.points[0];
+        path = Waypoints.waypoint[0];
+        enemyTransform = transform;
+        health = startHealth;
     }
 
-    public void TakeDamage (int amount)
+    public void TakeDamage (float amount)
     {
         health -= amount;
+
+        healthBar.fillAmount = health / startHealth;
         if (health <= 0)
         {
             Die();
@@ -37,24 +44,35 @@ public class Enemy : MonoBehaviour
     }
     void Update ()
     {
-        Vector3 dir = target.position - transform.position;
+        Vector3 dir = path.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
-        if (Vector3.Distance(transform.position, target.position) <= 0.2f)
+        if (Vector3.Distance(transform.position, path.position) <= 0.2f)
         {
             GetNextWaypoint();
         }
+
+        LookAtWaypoint();
     }
 
     void GetNextWaypoint()
     {
-        if (wavepointIndex >= Waypoints.points.Length - 1)
+        if (wavepointIndex >= Waypoints.waypoint.Length - 1)
         {
             EndPath();
             return;
         }
         wavepointIndex++;
-        target = Waypoints.points[wavepointIndex];
+        path = Waypoints.waypoint[wavepointIndex];
+    }
+
+    void LookAtWaypoint()
+    {
+        Vector3 directionToWaypoint = path.position - enemyTransform.position;
+
+        Quaternion targetRotation = Quaternion.LookRotation(directionToWaypoint);
+
+        enemyTransform.rotation = Quaternion.Slerp(enemyTransform.rotation, targetRotation, Time.deltaTime * 5f);
     }
 
     void EndPath ()
