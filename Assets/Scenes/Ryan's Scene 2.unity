@@ -9135,7 +9135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2555a2f9b2e5b38499b7b0154cadc5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standarTurretPrefab: {fileID: 2399077721245480859, guid: f361c9d64df0127448f75f7fc9e9716d,
+  cooldownImage: {fileID: 0}
+  standarTurretPrefab: {fileID: 3097741908085783555, guid: a2aa526709b065b41a443f8aed05ca96,
     type: 3}
 --- !u!114 &951872782
 MonoBehaviour:
