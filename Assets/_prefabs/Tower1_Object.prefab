@@ -152,6 +152,12 @@ PrefabInstance:
       propertyPath: range
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4500268108869929331, guid: bf86caab4a545cc4390d59c2c2228b42,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 922662513880279009, guid: 65fb7d733e974a446b519c6b9058bb89,
+        type: 3}
     - target: {fileID: 4934131665397968101, guid: bf86caab4a545cc4390d59c2c2228b42,
         type: 3}
       propertyPath: m_LocalScale.x
