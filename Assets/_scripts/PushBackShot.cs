@@ -6,7 +6,6 @@ public class PushBackShot : MonoBehaviour
 {
     public float speed = -2f;
     private Transform path;
-    private int wavepointIndex = 0;
 
     // Start is called before the first frame update
     void Start()

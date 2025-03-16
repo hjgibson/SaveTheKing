@@ -10,6 +10,7 @@ TagManager:
   - Path
   - Tower1
   - Tower2
+  - PBS
   layers:
   - Default
   - TransparentFX
