@@ -5,9 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Wave
 {
-    public GameObject blueEnemy;
-    public GameObject redEnemy;
-    public GameObject yellowEnemy;
+    public Transform[] enemyTypes; 
     public int count;
     public float rate;
 }

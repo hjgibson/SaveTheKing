@@ -9,11 +9,17 @@ using TMPro;
  */
 public class WaveSpawning : MonoBehaviour
 {
+    public static int EnemiesAlive = 0;
 
-    public Transform enemy1Prefab; 
+
+    public Wave[] waves;
+
+
+    /*
+    public Transform enemy1Prefab;
     public Transform enemy2Prefab;
     public Transform enemy3Prefab;
-
+    */
     public Transform spawnPoint;
 
     public float timeBetweenWaves = 20f;
@@ -34,17 +40,23 @@ public class WaveSpawning : MonoBehaviour
             UIManager.instance.UpdateTimer(Timer);
         }
 
+        if (EnemiesAlive > 0)
+        {
+            return;
+        }
+
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
+            return;
         }
         countdown -= Time.deltaTime;
 
         //countdown can't be negative
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
-       
+
     }
 
     public void GameOver()
@@ -58,41 +70,55 @@ public class WaveSpawning : MonoBehaviour
     /// <returns></returns>
     IEnumerator SpawnWave()
     {
-        waveNumber++;
-        for (int i = 0; i < waveNumber; i++)
+        Wave currentWave = waves[waveNumber]; // Get the current wave
+
+        for (int i = 0; i < currentWave.count; i++)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
+            SpawnEnemy(currentWave); // Pass the current wave to SpawnEnemy
+            yield return new WaitForSeconds(1f / currentWave.rate);
+        }
+
+        waveNumber++;
+
+
+        if(waveNumber == waves.Length)
+        {
+            Debug.Log("level won");
+            this.enabled = false;
         }
     }
     /// <summary>
     /// instantiates the enemy prefabs
     /// </summary>
-    public void SpawnEnemy()
+    public void SpawnEnemy(Wave currentWave)
     {
-        int randomEnemy = Random.Range(0, 3); // Generates a random number between 0 and 2
-
-        Transform enemyToSpawn;
-
+        int randomEnemy = Random.Range(0, currentWave.enemyTypes.Length); // Randomly select from the current wave's enemy types
+        Transform enemyToSpawn = null;
         switch (randomEnemy)
         {
             case 0:
-                enemyToSpawn = enemy1Prefab;
+                enemyToSpawn = currentWave.enemyTypes[0];
                 break;
             case 1:
-                enemyToSpawn = enemy2Prefab;
+                if (currentWave.enemyTypes.Length > 1)
+                    enemyToSpawn = currentWave.enemyTypes[1];
                 break;
             case 2:
-                enemyToSpawn = enemy3Prefab;
+                if (currentWave.enemyTypes.Length > 2)
+                    enemyToSpawn = currentWave.enemyTypes[2];
                 break;
             default:
-                enemyToSpawn = enemy1Prefab; 
+                enemyToSpawn = currentWave.enemyTypes[0];
                 break;
         }
 
         Instantiate(enemyToSpawn, spawnPoint.position, spawnPoint.rotation);
+        EnemiesAlive++;
+
+
+
     }
-    
+
 
 
 
