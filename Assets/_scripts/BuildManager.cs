@@ -47,11 +47,11 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
-    private void Update()
-    {
-        if(cooldown != null && cooldown.IsCoolingDown())
-        {
-            cooldown.UpdateCooldownUI();
-        }
-    }
+   // private void Update()
+    //{
+      //  if(cooldown != null && cooldown.IsCoolingDown())
+      //  {
+      //      cooldown.UpdateCooldownUI();
+      //  }
+   // }
 }

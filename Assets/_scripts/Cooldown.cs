@@ -5,24 +5,30 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Cooldown 
+public class Cooldown : MonoBehaviour
 {
 
     public float cooldownTime;
     public float _nextSpawnTime;
+    public Image cooldownUI;
 
 
     //private Image cooldownUI;
     public Cooldown(float cooldownTime)// Image cooldownUI)
     {
         this.cooldownTime = cooldownTime;
-     //   this.cooldownUI = cooldownUI;
+      // this.cooldownUI = cooldownUI;
         _nextSpawnTime = 0;
-      //  if(cooldownUI != null)
-       // {
-        //    cooldownUI.fillAmount = 0f;
-       // }
+        if(cooldownUI != null)
+        {
+            cooldownUI.fillAmount = 0f;
+        }
 
+    }
+
+    private void Update()
+    {
+        UpdateCooldownUI();
     }
     public bool IsCoolingDown()
     {
@@ -42,10 +48,10 @@ public class Cooldown
 
     public void UpdateCooldownUI()
     {
-       // if (cooldownUI != null)
-       // {
-       //     float elapsedTime = Mathf.Clamp01(1 - (GetRemainingCooldownTime() / cooldownTime));
-       //     cooldownUI.fillAmount = elapsedTime;
-      //  }
+        if (cooldownUI != null)
+        {
+            float elapsedTime = Mathf.Clamp01(1 - (GetRemainingCooldownTime() / cooldownTime));
+           cooldownUI.fillAmount = elapsedTime;
+        }
     }
 }
