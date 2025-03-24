@@ -273,6 +273,11 @@ PrefabInstance:
       objectReference: {fileID: 6216884900890745990}
     - target: {fileID: 6514269075822200205, guid: ef32650eba46dcc47838d9a6757a3476,
         type: 3}
+      propertyPath: enemyDamage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514269075822200205, guid: ef32650eba46dcc47838d9a6757a3476,
+        type: 3}
       propertyPath: pointamount
       value: 100
       objectReference: {fileID: 0}
@@ -388,13 +393,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 353a57ee64cc30144bf3684b092e8fa9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.287
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 200
+  Priority: 230
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
