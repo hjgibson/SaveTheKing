@@ -11,7 +11,6 @@ public class LivesUI : MonoBehaviour
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI cooldownText;
     public TextMeshProUGUI ScoreText;
-    public TextMeshProUGUI goldText;
 
     public void Start()
     {
@@ -23,7 +22,7 @@ public class LivesUI : MonoBehaviour
     {
         HealthText.text = "HEALTH " + PlayerLives.Health.ToString();
 
-        goldText.text = "Gold " + PlayerStats.gold.ToString();
+        
 
         cooldownText.text = "Cooldown: " + Mathf.Ceil(cooldown.GetRemainingCooldownTime()).ToString() + "s"; // Show remaining time
       
