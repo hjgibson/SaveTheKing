@@ -11,6 +11,7 @@ public class WaveSpawning : MonoBehaviour
 {
     public static int EnemiesAlive = 0;
 
+    private GameOverManager gameManager;
 
     public Wave[] waves;
 
@@ -29,7 +30,10 @@ public class WaveSpawning : MonoBehaviour
 
     private float Timer = 0;
 
-
+    private void Awake()
+    {
+        gameManager = FindObjectOfType<GameOverManager>();
+    }
 
     void Update()
     {
@@ -40,9 +44,17 @@ public class WaveSpawning : MonoBehaviour
             UIManager.instance.UpdateTimer(Timer);
         }
 
+        Debug.Log($"WaveNumber: {waveNumber}, EnemiesAlive: {EnemiesAlive}");
+
         if (EnemiesAlive > 0)
         {
             return;
+        }
+        if (waveNumber == waves.Length && EnemiesAlive == 0)
+        {
+            Debug.Log("level won");
+            gameManager.WinLevel();
+            this.enabled = false;
         }
 
         if (countdown <= 0f)
@@ -58,6 +70,8 @@ public class WaveSpawning : MonoBehaviour
 
 
     }
+
+
 
     public void GameOver()
     {
@@ -81,11 +95,7 @@ public class WaveSpawning : MonoBehaviour
         waveNumber++;
 
 
-        if(waveNumber == waves.Length)
-        {
-            Debug.Log("level won");
-            this.enabled = false;
-        }
+     
     }
     /// <summary>
     /// instantiates the enemy prefabs
@@ -114,7 +124,7 @@ public class WaveSpawning : MonoBehaviour
 
         Instantiate(enemyToSpawn, spawnPoint.position, spawnPoint.rotation);
         EnemiesAlive++;
-
+        Debug.Log("Enemy spawned. EnemiesAlive: " + WaveSpawning.EnemiesAlive);
 
 
     }

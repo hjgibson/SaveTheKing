@@ -28,7 +28,11 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         WaveSpawning.EnemiesAlive--;
-       // WaveSpawner.EnemiesAlive--;
+        if (WaveSpawning.EnemiesAlive < 0)
+        {
+            WaveSpawning.EnemiesAlive = 0;
+        }
+        // WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }
     void Update ()
@@ -57,6 +61,10 @@ public class Enemy : MonoBehaviour
     {
         PlayerLives.Health -= enemyDamage;
         WaveSpawning.EnemiesAlive--;
+        if (WaveSpawning.EnemiesAlive < 0)
+        {
+            WaveSpawning.EnemiesAlive = 0;
+        }
         //WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
      
