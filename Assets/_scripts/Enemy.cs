@@ -10,11 +10,13 @@ public class Enemy : MonoBehaviour
     public float startHealth = 100;
     private float health;
     public int Points = 0;
+    public static int gold;
     private Transform path;
     private int wavepointIndex = 0;
-    
+   // public List<Gold> lootList = new List<Gold>();
     private Transform enemyTransform;
     public int pointamount;
+    public int goldamount;
 
     public Image healthBar;
 
@@ -38,13 +40,9 @@ public class Enemy : MonoBehaviour
 
     void Die ()
     {
-        //WaveSpawner.EnemiesAlive--;
+        WaveSpawner.EnemiesAlive--;
         PlayerStats.Points += pointamount;
-        WaveSpawning.EnemiesAlive--;
-        if (WaveSpawning.EnemiesAlive < 0)
-        {
-            WaveSpawning.EnemiesAlive = 0;
-        }
+        PlayerStats.gold += goldamount;
         Destroy(gameObject);
     }
     void Update ()
@@ -84,15 +82,11 @@ public class Enemy : MonoBehaviour
     {
         PlayerLives.Health -= enemyDamage;
 
-        //WaveSpawner.EnemiesAlive--;
-        WaveSpawning.EnemiesAlive--;
-        if (WaveSpawning.EnemiesAlive < 0)
-        {
-            WaveSpawning.EnemiesAlive = 0;
-        }
+        WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
      
     }
 
+    //write a list that sets up gold spawning chance to 10.
    
 }
