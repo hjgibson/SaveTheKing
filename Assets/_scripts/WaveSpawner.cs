@@ -6,7 +6,12 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
+  /*
+    
     public static int EnemiesAlive = 0;
+
+
+
     //public Transform enemyPrefab;
     public Wave[] waves;
 
@@ -79,4 +84,5 @@ public class WaveSpawner : MonoBehaviour
 
         EnemiesAlive++;
     }
+  */
 }
