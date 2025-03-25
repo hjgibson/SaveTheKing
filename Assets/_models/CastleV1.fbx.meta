@@ -3,7 +3,37 @@ guid: 2a80a3c648c1f774aad7e502d650c028
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: 106fb6c7b4c11bc4d9d12ab45b6525d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EntryBlue
+    second: {fileID: 2100000, guid: 64f6ca40ddc2f0e4b97d3761843cacbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TopRed
+    second: {fileID: 2100000, guid: d12fa39cbdf72c84987317e930d9d58a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TowerBaseYellow
+    second: {fileID: 2100000, guid: 536338b720b72664ba5bc18394ed719a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TrimGreen
+    second: {fileID: 2100000, guid: 92841e0dc06d2454da7c1413ad6a1b76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TrimGreen1
+    second: {fileID: 2100000, guid: c4a17a3feda7a4c4784552d140e00b27, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
