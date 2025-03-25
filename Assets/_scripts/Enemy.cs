@@ -18,8 +18,6 @@ public class Enemy : MonoBehaviour
 
     public Image healthBar;
 
-    public float score;
-
     void Start ()
     {
         path = Waypoints.waypoint[0];
