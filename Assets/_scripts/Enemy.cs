@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
 
     void Die ()
     {
-        WaveSpawner.EnemiesAlive--;
+        WaveSpawning.EnemiesAlive--;
         PlayerStats.Points += pointamount;
         PlayerStats.gold += goldamount;
         Destroy(gameObject);
@@ -84,7 +84,7 @@ public class Enemy : MonoBehaviour
     {
         PlayerLives.Health -= enemyDamage;
 
-        WaveSpawner.EnemiesAlive--;
+        WaveSpawning.EnemiesAlive--;
         Destroy(gameObject);
      
     }
