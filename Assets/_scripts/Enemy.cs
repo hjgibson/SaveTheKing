@@ -38,8 +38,13 @@ public class Enemy : MonoBehaviour
 
     void Die ()
     {
-        WaveSpawner.EnemiesAlive--;
+        //WaveSpawner.EnemiesAlive--;
         PlayerStats.Points += pointamount;
+        WaveSpawning.EnemiesAlive--;
+        if (WaveSpawning.EnemiesAlive < 0)
+        {
+            WaveSpawning.EnemiesAlive = 0;
+        }
         Destroy(gameObject);
     }
     void Update ()
@@ -79,7 +84,12 @@ public class Enemy : MonoBehaviour
     {
         PlayerLives.Health -= enemyDamage;
 
-        WaveSpawner.EnemiesAlive--;
+        //WaveSpawner.EnemiesAlive--;
+        WaveSpawning.EnemiesAlive--;
+        if (WaveSpawning.EnemiesAlive < 0)
+        {
+            WaveSpawning.EnemiesAlive = 0;
+        }
         Destroy(gameObject);
      
     }
