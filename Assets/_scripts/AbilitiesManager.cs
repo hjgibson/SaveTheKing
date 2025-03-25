@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class AbilitiesManager : MonoBehaviour
 {
-    public float waitTime = 12f;
+    public float waitTime = 2f;
     public bool Back = false;
+    public Rigidbody mybod;
+    
 
-
-   
     // Start is called before the first frame update
     void Start()
     {
@@ -20,14 +20,21 @@ public class AbilitiesManager : MonoBehaviour
     {
         //gameObject.GetComponent<Enemy>().enabled = true;
         //gameObject.GetComponent<PushBackShot>().enabled = false;
+
+        //Vector3 dir = path.position - transform.position;
+        //transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+
+
+        
+        
     }
     public IEnumerator TurnBack()
     {
         Back = true;
-
+        Debug.Log("Bruh2");
         yield return new WaitForSeconds(waitTime);
         Back = false;
-        Debug.Log("Bruh2");
+        
         gameObject.GetComponent<Enemy>().enabled = true;
         gameObject.GetComponent<PushBackShot>().enabled = false;
 

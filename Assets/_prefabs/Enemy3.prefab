@@ -497,7 +497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b048d13f7363a4a9420ab8f1b9701a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -2
 --- !u!114 &-6037054929739461820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,9 +509,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32bd586143f424f4184189f52c10e727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 12
+  waitTime: 2
   Back: 0
-  Ene: {fileID: 6879525326247848638}
+  mybod: {fileID: 0}
 --- !u!1001 &5035261302627568449
 PrefabInstance:
   m_ObjectHideFlags: 0

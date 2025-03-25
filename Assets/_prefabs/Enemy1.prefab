@@ -580,7 +580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b048d13f7363a4a9420ab8f1b9701a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -2
 --- !u!114 &2783209996612916524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,9 +592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32bd586143f424f4184189f52c10e727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 12
+  waitTime: 2
   Back: 0
-  Ene: {fileID: 2550901372686597104}
+  mybod: {fileID: 0}
 --- !u!4 &3366688754080726586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 942465131986600997, guid: 56fe295c69788ca46bc8bbd24f35dc50,
