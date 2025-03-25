@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
-using UnityEditor.ShaderGraph.Internal;
+//using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class gridGenerator : MonoBehaviour
@@ -30,7 +30,7 @@ public class gridGenerator : MonoBehaviour
     private void Start()
     {
         GenerateGrid();
-        GenerateRoad(pointA, pointB);
+      //  GenerateRoad(pointA, pointB);
     }
     /// <summary>
     /// generates the nodes in a 10 by 15 grid

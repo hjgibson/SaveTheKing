@@ -22,7 +22,10 @@ public class Node : MonoBehaviour
 
     private bool firstClick = false;
 
-    private Vector3 selectedPosition;
+    public static Node selectedNode;
+   
+
+    public Transform spawnPoint;
 
     //  public int currentTowerCount;
 
@@ -41,12 +44,12 @@ public class Node : MonoBehaviour
    
     private void OnMouseEnter()
     {
-        rend.material.color = hoverColor;
+       // rend.material.color = hoverColor;
     }
 
     private void OnMouseExit()
     {
-        rend.material.color = startColor;
+      //  rend.material.color = startColor;
     }
 
     
@@ -60,7 +63,7 @@ public class Node : MonoBehaviour
         //   return;
         //  }
 
-        if (cooldown.IsCoolingDown()) return;
+       if (cooldown.IsCoolingDown()) return;
 
         if (towerPrefab != null)
         {
@@ -76,35 +79,44 @@ public class Node : MonoBehaviour
         // Check if it's the first click
         if (!firstClick)
         {
-            // First click: Select the position for tower placement
-            
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
+            if(selectedNode != null && selectedNode != this)
             {
-                selectedPosition = hit.point; 
-                firstClick = true;             
-                Debug.Log("Position selected! Click again to confirm placement.");
+                selectedNode.rend.material.color = selectedNode.startColor;
+                selectedNode.firstClick = false;
             }
+            // First click: Select the position for tower placement
+            rend.material.color = hoverColor;
+            selectedNode = this;
+            firstClick = true;
+
+            Debug.Log("Position selected! Click again to confirm placement.");
+
         }
-        else
+        else if(selectedNode == this)
         {
+            rend.material.color = startColor;
             // Second click: Place the tower at the selected position
-            if(towerPrefab == null)
+            if (towerPrefab == null)
             {
-                towerPrefab = Instantiate(turretToBuild, selectedPosition + positionOffset, transform.rotation);
-                cooldown.StartCooldown(); 
+                towerPrefab = Instantiate(turretToBuild, spawnPoint.position + positionOffset, transform.rotation);
+                cooldown.StartCooldown();
+                LivesUI livesUI = FindObjectOfType<LivesUI>();
+                livesUI.RestartCooldown();
+
+                
 
                 Debug.Log("CoolDown started! wait a few seconds");
 
                 firstClick = false; 
-                Debug.Log("Tower placed at " + selectedPosition);
+             //   Debug.Log("Tower placed at " + selectedPosition);
             }
          
         }
         //GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
         // towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+
+        
+        
 
 
 
