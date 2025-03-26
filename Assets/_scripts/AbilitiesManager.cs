@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class AbilitiesManager : MonoBehaviour
 {
-    public float waitTime = 12f;
+    public float waitTime = 2f;
     public bool Back = false;
-    public List<GameObject> Save;
+    public Rigidbody mybod;
+    
 
-    private int Num;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,43 +16,36 @@ public class AbilitiesManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        //Restart();
-        if (Back == false)
-        {
-            foreach (GameObject gameObject in Save)
-            {
-                gameObject.GetComponent<Enemy>().enabled = true;
-                gameObject.GetComponent<PushBackShot>().enabled = false;
-            }
+        //gameObject.GetComponent<Enemy>().enabled = true;
+        //gameObject.GetComponent<PushBackShot>().enabled = false;
 
-        }
-        if(Save == null)
-        {
-            return;
-        }
+        //Vector3 dir = path.position - transform.position;
+        //transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+
+
+        
+        
     }
     public IEnumerator TurnBack()
     {
         Back = true;
+        Debug.Log("Bruh2");
         yield return new WaitForSeconds(waitTime);
         Back = false;
-        Debug.Log("Bruh2");
+        
+        gameObject.GetComponent<Enemy>().enabled = true;
+        gameObject.GetComponent<PushBackShot>().enabled = false;
 
     }
-    private void OnCollisionEnter(Collision other)
+    public void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "PBS")
         {
-            Save.Add(other.gameObject);
+            gameObject.GetComponent<Enemy>().enabled = false;
+            gameObject.GetComponent<PushBackShot>().enabled = true;
             StartCoroutine(TurnBack());
-            if(Back == true)
-            {
-                other.gameObject.GetComponent<Enemy>().enabled = false;
-                other.gameObject.GetComponent<PushBackShot>().enabled = true;
-
-            }
             
         }
 
