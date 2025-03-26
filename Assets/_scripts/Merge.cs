@@ -11,12 +11,16 @@ public class Merge : MonoBehaviour
 
     private bool isDragging = false;
     public Vector3 offset;
+    public Transform spawnNode;
+
+    private bool isMerged = false;
 
 
 
     private void OnMouseDown()
     {
         isDragging = true;
+        
         offset = transform.position - MouseWorldPosition();
     }
 
@@ -32,6 +36,11 @@ public class Merge : MonoBehaviour
     private void OnMouseUp()
     {
         isDragging = false;
+
+        if (!isMerged && spawnNode != null)
+        {
+            transform.position = spawnNode.position;
+        }
      
    
     }

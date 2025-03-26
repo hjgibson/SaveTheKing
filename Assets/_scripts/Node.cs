@@ -73,6 +73,7 @@ public class Node : MonoBehaviour
         }
         GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
         Debug.Log("Is this the place you want to build?");
+
         //towerPrefab = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
      
         
@@ -84,7 +85,7 @@ public class Node : MonoBehaviour
                 selectedNode.rend.material.color = selectedNode.startColor;
                 selectedNode.firstClick = false;
             }
-            // First click: Select the position for tower placement
+        
             rend.material.color = hoverColor;
             selectedNode = this;
             firstClick = true;
@@ -95,10 +96,24 @@ public class Node : MonoBehaviour
         else if(selectedNode == this)
         {
             rend.material.color = startColor;
-            // Second click: Place the tower at the selected position
+          
             if (towerPrefab == null)
             {
-                towerPrefab = Instantiate(turretToBuild, spawnPoint.position + positionOffset, transform.rotation);
+
+                // Explicitly use world position of spawnPoint
+                Vector3 spawnPosition = spawnPoint.position; // Get world position of spawn point
+                // Apply the positionOffset only if needed
+                Vector3 finalPosition = spawnPosition + positionOffset;
+
+
+                towerPrefab = Instantiate(turretToBuild, spawnPoint.position, transform.rotation);
+
+                NewMerge towerScript = towerPrefab.GetComponent<NewMerge>();
+                if (towerScript != null)
+                {
+                    towerScript.SetSpawnNode(this.transform); // Pass the node as the spawn reference
+                }
+
                 cooldown.StartCooldown();
                 LivesUI livesUI = FindObjectOfType<LivesUI>();
                 livesUI.RestartCooldown();

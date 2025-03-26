@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -14,8 +14,15 @@ public class NewMerge : MonoBehaviour
 
     public static bool mouseButtonReleased;
 
+
+    public Transform spawnNode;
+    public GameObject spawnPoint; // Where towers are placed
+
+
     public GameObject tower2Prefab;
     public GameObject tower3Prefab;
+
+    private bool hasMerged = false;
 
     private void Update()
     {
@@ -49,50 +56,105 @@ public class NewMerge : MonoBehaviour
         {
             isDragging = false;
             mouseButtonReleased = true;
+
+
+            if (!isMerged && spawnNode != null)
+            {
+                transform.position = spawnNode.position; 
+            }
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == ("Tower1") && !isMerged)
+        if (isMerged || hasMerged)
+            return;
+        if ((collision.gameObject.CompareTag("Tower1") || collision.gameObject.CompareTag("Tower2")) && !isMerged)
         {
-           isMerged = true;
-            StartCoroutine(WaitTime());
-            Debug.Log("Tower 1 detected and is merging");
+            isMerged = true; // Lock the merging process to prevent it from happening more than once
+            hasMerged = true;
+            GameObject newTower = null;
 
-            Debug.Log("tower1 detected");
-            Instantiate(tower2Prefab, transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
-            Destroy(gameObject, .25f);
+            // Check if the collided object is Tower1 or Tower2
+            if (collision.gameObject.CompareTag("Tower1"))
+            {
+                if (tower2Prefab != null)
+                {
+                    newTower = Instantiate(tower2Prefab, transform.position, Quaternion.identity);
+                    Debug.Log("Tower 1 merged into Tower 2");
+                }
+            }
+            else if (collision.gameObject.CompareTag("Tower2"))
+            {
+                if (tower3Prefab != null)
+                {
+                    newTower = Instantiate(tower3Prefab, transform.position , Quaternion.identity);
+                    Debug.Log("Tower 2 merged into Tower 3");
+                }
+            }
+            // Ensure the new tower gets the spawn node and reset merge status
+            if (newTower != null)
+            {
+                NewMerge newTowerScript = newTower.GetComponent<NewMerge>();
+                if (newTowerScript != null)
+                {
+                    // Ensure spawn node is set properly
+                    newTowerScript.SetSpawnNode(this.spawnNode);
+                    newTowerScript.ResetMergeStatus();  // Reset `isMerged` for the new towers
 
-         
-        }
+                    // Make sure the new tower spawns at the correct position
+                    newTower.transform.position = this.spawnNode.position; //+ newTowerScript.GetOffset();
+                }
+            }
 
-        if(collision.gameObject.tag == "Tower2" && !isMerged)
-        {
-            isMerged = true;
-            Debug.Log("tower2 detected and is merging");
-            StartCoroutine(WaitTime());
-            Instantiate(tower3Prefab, transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
-            Destroy(gameObject,.25f);
-
+            // Delay destroying the current tower to ensure the new one is set up correctly
+            StartCoroutine(DestroyOldTower(collision.gameObject));
         }
 
     }
-    IEnumerator WaitTime()
+
+
+    // Method to set spawn node
+    public void SetSpawnNode(Transform node)
     {
-        isMerged = true;
+        spawnNode = node;
+    }
 
-        yield return new WaitForSeconds(3);
-
+    public void ResetMergeStatus()
+    {
         isMerged = false;
-
-
-
-        Debug.Log("can merge now");
     }
 
 
+    // Coroutine to delay destruction and allow the new tower to be instantiated first
+    private IEnumerator DestroyOldTower(GameObject oldTower)
+    {
+        // Disable the colliders temporarily to avoid re-triggering the collision
+        Collider oldTowerCollider = oldTower.GetComponent<Collider>();
+        Collider currentTowerCollider = gameObject.GetComponent<Collider>();
+        if (oldTowerCollider != null)
+            oldTowerCollider.enabled = false;
+        if (currentTowerCollider != null)
+            currentTowerCollider.enabled = false;
 
+        // Allow a frame for the new tower to be instantiated before destroying
+        yield return null;
+
+        // Destroy the old tower (this could be Tower1 or Tower2)
+        Destroy(oldTower);
+
+        // Also destroy this current tower (the one that merged)
+        Destroy(gameObject);
+
+        // Re-enable the colliders just in case we need them back
+        if (oldTowerCollider != null)
+            oldTowerCollider.enabled = true;
+        if (currentTowerCollider != null)
+            currentTowerCollider.enabled = true;
+    }
+
+    public Vector3 GetOffset()
+    {
+        return transform.position - spawnNode.position;
+    }
 }
