@@ -24,9 +24,13 @@ public class WaveSpawning : MonoBehaviour
     public Transform spawnPoint;
 
     public float timeBetweenWaves = 20f;
-    private float countdown = 2f;
+    //private float countdown = 2f;
 
     private int waveNumber = 0;
+    private bool isBuildPhase = true;
+
+    public GameObject buildPhasePanel;
+    public TMP_Text waveText;
 
     private float Timer = 0;
 
@@ -55,8 +59,13 @@ public class WaveSpawning : MonoBehaviour
             Debug.Log("level won");
             gameManager.WinLevel();
             this.enabled = false;
+            return;
         }
-
+        if (isBuildPhase)
+        {
+            ShowBuildPhaseUI();
+        }
+        /*
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
@@ -67,12 +76,26 @@ public class WaveSpawning : MonoBehaviour
 
         //countdown can't be negative
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-
+        */
 
     }
 
 
+    void ShowBuildPhaseUI()
+    {
+        buildPhasePanel.SetActive(true); // Show the build phase panel
+        waveText.text = "Wave " + (waveNumber + 1) + " Starting...";
+    }
 
+    public void StartNextWave()
+    {
+        if (EnemiesAlive == 0) // Only start the wave if no enemies remain
+        {
+            buildPhasePanel.SetActive(false);
+            isBuildPhase = false;
+            StartCoroutine(SpawnWave());
+        }
+    }
     public void GameOver()
     {
         Time.timeScale = 0f; // Freezes the game
@@ -84,6 +107,8 @@ public class WaveSpawning : MonoBehaviour
     /// <returns></returns>
     IEnumerator SpawnWave()
     {
+
+        isBuildPhase = false;
         Wave currentWave = waves[waveNumber]; // Get the current wave
 
         for (int i = 0; i < currentWave.count; i++)
@@ -93,9 +118,9 @@ public class WaveSpawning : MonoBehaviour
         }
 
         waveNumber++;
+        isBuildPhase = true; // Go back to build phase
 
 
-     
     }
     /// <summary>
     /// instantiates the enemy prefabs
