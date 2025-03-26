@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
+   
     public GameObject shopUI;
 
     public static bool GameIsPaused = false;
 
 
-   // public GameObject PauseMenuUI;
+    // public GameObject PauseMenuUI;
     public GameObject shopButton;
 
 
@@ -60,3 +61,4 @@ public class ShopManager : MonoBehaviour
 
     }
 }
+

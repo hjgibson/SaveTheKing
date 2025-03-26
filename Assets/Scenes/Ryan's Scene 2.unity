@@ -9100,15 +9100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1668a598b20ae499a6554d59c2e813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves:
-  - enemyTypes:
-    - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
-    count: 2
-    rate: 2
-  - enemyTypes:
-    - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
-    count: 5
-    rate: 5
+  enemy1Prefab: {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02,
+    type: 3}
+  enemy2Prefab: {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde,
+    type: 3}
+  enemy3Prefab: {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4,
+    type: 3}
   spawnPoint: {fileID: 1108271943}
   timeBetweenWaves: 7
 --- !u!4 &951872780
@@ -17098,7 +17095,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 93279567}
-  winPanel: {fileID: 0}
 --- !u!114 &1943437269
 MonoBehaviour:
   m_ObjectHideFlags: 0
