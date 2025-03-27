@@ -6,6 +6,7 @@ using TMPro;
 public class PlayerStats : MonoBehaviour
 {
     public static int Points;
+    public static int gold;
     public TextMeshProUGUI HighscoreText;
     public int startPoints = 0;
 
