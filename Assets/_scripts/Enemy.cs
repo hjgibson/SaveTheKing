@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public float startHealth = 100;
     private float health;
     public int Points = 0;
+    public static int gold;
+    public int goldamount;
     private Transform path;
     private int wavepointIndex = 0;
     
@@ -40,10 +42,8 @@ public class Enemy : MonoBehaviour
     {
 
         WaveSpawning.EnemiesAlive--;
-
-        //WaveSpawner.EnemiesAlive--;
-
         PlayerStats.Points += pointamount;
+        PlayerStats.gold += goldamount;
         WaveSpawning.EnemiesAlive--;
         if (WaveSpawning.EnemiesAlive < 0)
         {
@@ -91,7 +91,6 @@ public class Enemy : MonoBehaviour
 
         WaveSpawning.EnemiesAlive--;
 
-        //WaveSpawner.EnemiesAlive--;
         WaveSpawning.EnemiesAlive--;
         if (WaveSpawning.EnemiesAlive < 0)
         {
