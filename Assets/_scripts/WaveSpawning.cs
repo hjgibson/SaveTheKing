@@ -13,21 +13,17 @@ public class WaveSpawning : MonoBehaviour
 
     private GameOverManager gameManager;
 
+    private bool isWaveComplete = false;
+
     public Wave[] waves;
 
-
-    /*
-    public Transform enemy1Prefab;
-    public Transform enemy2Prefab;
-    public Transform enemy3Prefab;
-    */
     public Transform spawnPoint;
 
     public float timeBetweenWaves = 20f;
-    //private float countdown = 2f;
+  
 
     private int waveNumber = 0;
-    private bool isBuildPhase = true;
+  
 
     public GameObject buildPhasePanel;
     public TMP_Text waveText;
@@ -50,33 +46,30 @@ public class WaveSpawning : MonoBehaviour
 
         Debug.Log($"WaveNumber: {waveNumber}, EnemiesAlive: {EnemiesAlive}");
 
+        // If enemies are still alive, don't enter build phase
         if (EnemiesAlive > 0)
         {
-            return;
+            isWaveComplete = false; // Reset wave completion status
+            return; // Exit if there are still enemies
         }
-        if (waveNumber == waves.Length && EnemiesAlive == 0)
+
+        // Check if the wave is complete (all enemies dead)
+        if (!isWaveComplete && EnemiesAlive == 0 && waveNumber < waves.Length)
         {
-            Debug.Log("level won");
+            isWaveComplete = true; // Mark wave as complete
+            Debug.Log("Wave Complete. Show build phase UI.");
+            ShowBuildPhaseUI(); // Show build phase UI
+        }
+
+        // If the wave count is complete, handle victory
+        if (waveNumber == waves.Length)
+        {
+            Debug.Log("Level Won");
             gameManager.WinLevel();
             this.enabled = false;
             return;
         }
-        if (isBuildPhase)
-        {
-            ShowBuildPhaseUI();
-        }
-        /*
-        if (countdown <= 0f)
-        {
-            StartCoroutine(SpawnWave());
-            countdown = timeBetweenWaves;
-            return;
-        }
-        countdown -= Time.deltaTime;
-
-        //countdown can't be negative
-        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-        */
+  
 
     }
 
@@ -84,7 +77,7 @@ public class WaveSpawning : MonoBehaviour
     void ShowBuildPhaseUI()
     {
         buildPhasePanel.SetActive(true); // Show the build phase panel
-        waveText.text = "Wave " + (waveNumber + 1) + " Starting...";
+        waveText.text = "Wave: " + (waveNumber + 1);
     }
 
     public void StartNextWave()
@@ -92,7 +85,7 @@ public class WaveSpawning : MonoBehaviour
         if (EnemiesAlive == 0) // Only start the wave if no enemies remain
         {
             buildPhasePanel.SetActive(false);
-            isBuildPhase = false;
+           
             StartCoroutine(SpawnWave());
         }
     }
@@ -108,7 +101,7 @@ public class WaveSpawning : MonoBehaviour
     IEnumerator SpawnWave()
     {
 
-        isBuildPhase = false;
+        
         Wave currentWave = waves[waveNumber]; // Get the current wave
 
         for (int i = 0; i < currentWave.count; i++)
@@ -118,8 +111,8 @@ public class WaveSpawning : MonoBehaviour
         }
 
         waveNumber++;
-        isBuildPhase = true; // Go back to build phase
-
+        
+        isWaveComplete = false; // Reset wave complete status when the next wave starts
 
     }
     /// <summary>
