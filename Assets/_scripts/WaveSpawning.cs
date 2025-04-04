@@ -78,6 +78,7 @@ public class WaveSpawning : MonoBehaviour
     {
         buildPhasePanel.SetActive(true); // Show the build phase panel
         waveText.text = "Wave: " + (waveNumber + 1);
+        Time.timeScale = 0f;
     }
 
     public void StartNextWave()
@@ -85,7 +86,7 @@ public class WaveSpawning : MonoBehaviour
         if (EnemiesAlive == 0) // Only start the wave if no enemies remain
         {
             buildPhasePanel.SetActive(false);
-           
+            Time.timeScale = 1f;
             StartCoroutine(SpawnWave());
         }
     }
