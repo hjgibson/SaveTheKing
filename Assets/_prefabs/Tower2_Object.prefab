@@ -376,8 +376,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ce009b7bb062942bd49eb2b2dceafd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnNode: {fileID: 0}
   tower2Prefab: {fileID: 5834209814601956168}
-  tower3Prefab: {fileID: 676125674515786998, guid: 240e7211e0a25de4c84791c793ad4e3a,
+  tower3Prefab: {fileID: 7792477902714990971, guid: 34eb9c6105a25304f8062b7a75206fcb,
     type: 3}
 --- !u!65 &-99905869206232146
 BoxCollider:
@@ -398,8 +399,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.652936, y: 3.716809, z: 4.894227}
-  m_Center: {x: -0.2696039, y: 1.3584032, z: 0.11719291}
+  m_Size: {x: 4.652936, y: 4.9769278, z: 4.894227}
+  m_Center: {x: -0.2696039, y: 1.9884582, z: 0.11719291}
 --- !u!54 &2246599002059016438
 Rigidbody:
   m_ObjectHideFlags: 0

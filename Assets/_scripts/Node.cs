@@ -25,7 +25,7 @@ public class Node : MonoBehaviour
     public static Node selectedNode;
    
 
-    public Transform spawnPoint;
+    public Vector3 spawnPoint;
 
     //  public int currentTowerCount;
 
@@ -101,17 +101,17 @@ public class Node : MonoBehaviour
             {
 
                 // Explicitly use world position of spawnPoint
-                Vector3 spawnPosition = spawnPoint.position; // Get world position of spawn point
+               // Vector3 spawnPosition = spawnPoint.position; // Get world position of spawn point
                 // Apply the positionOffset only if needed
-                Vector3 finalPosition = spawnPosition + positionOffset;
+                //Vector3 finalPosition = spawnPosition + positionOffset;
 
 
-                towerPrefab = Instantiate(turretToBuild, spawnPoint.position, transform.rotation);
+                towerPrefab = Instantiate(turretToBuild, spawnPoint +positionOffset, transform.rotation);
 
                 NewMerge towerScript = towerPrefab.GetComponent<NewMerge>();
                 if (towerScript != null)
                 {
-                    towerScript.SetSpawnNode(this.transform); // Pass the node as the spawn reference
+                    towerScript.SetSpawnNode(transform); // Pass the node as the spawn reference
                 }
 
                 cooldown.StartCooldown();
