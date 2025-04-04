@@ -3,7 +3,11 @@ guid: 52ce009b7bb062942bd49eb2b2dceafd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spawnNode: {instanceID: 0}
+  - spawnPoint: {instanceID: 0}
+  - tower2Prefab: {instanceID: 0}
+  - tower3Prefab: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

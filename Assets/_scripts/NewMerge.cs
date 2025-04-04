@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,12 +10,21 @@ public class NewMerge : MonoBehaviour
     private float offsetX, offsetY, offsetZ;
     private bool isDragging = false;
 
+
+
     public static bool isMerged;
 
     public static bool mouseButtonReleased;
 
+
+    public Transform spawnNode;
+   // public GameObject spawnPoint; // Where towers are placed
+
+
     public GameObject tower2Prefab;
     public GameObject tower3Prefab;
+
+    private bool hasMerged = false;
 
     private void Update()
     {
@@ -29,16 +38,15 @@ public class NewMerge : MonoBehaviour
                     mouseButtonReleased = false;
                     isDragging = true;
 
-                    Vector3 objectPosition = hit.transform.position;
-                    Vector3 screenPoint = Camera.main.WorldToScreenPoint(objectPosition);
-                    offsetX = Input.mousePosition.x - screenPoint.x;
-                    offsetY = Input.mousePosition.y - screenPoint.y;
+                    Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.position);
+                    offsetX = 0;
+                    offsetY = 0;
                     offsetZ = screenPoint.z;
                 }
             }
         }
 
-        if (isDragging && Input.GetMouseButton(0))
+            if (isDragging && Input.GetMouseButton(0))
         {
             Vector3 screenMousePosition = new Vector3(Input.mousePosition.x - offsetX, Input.mousePosition.y - offsetY, offsetZ);
             mousePosition = Camera.main.ScreenToWorldPoint(screenMousePosition);
@@ -49,50 +57,56 @@ public class NewMerge : MonoBehaviour
         {
             isDragging = false;
             mouseButtonReleased = true;
+
+
+            if (!isMerged && spawnNode != null)
+            {
+                transform.position = spawnNode.position;
+               // transform.position = spawnPoint.transform.position;
+            }
         }
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == ("Tower1") && !isMerged)
+        if (hasMerged) return;
+
+        // Avoid merging twice by checking which object has the lower instance ID (i.e., older in hierarchy)
+        if (collision.gameObject.TryGetComponent<NewMerge>(out NewMerge otherTower) && gameObject.GetInstanceID() > collision.gameObject.GetInstanceID())
+            return;
+        // The higher ID object lets the lower ID one handle the merge
+
+        GameObject mergeResult = GetMergeResult(collision.gameObject.tag);
+        if (mergeResult != null)
         {
-           isMerged = true;
-            StartCoroutine(WaitTime());
-            Debug.Log("Tower 1 detected and is merging");
+            hasMerged = true;
+            Instantiate(mergeResult, transform.position, Quaternion.identity)
+                .GetComponent<NewMerge>().SetSpawnNode(spawnNode);
 
-            Debug.Log("tower1 detected");
-            Instantiate(tower2Prefab, transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
-            Destroy(gameObject, .25f);
-
-         
+            Destroy(collision.gameObject); // Destroy the other tower
+            Destroy(gameObject); // Destroy this tower
         }
-
-        if(collision.gameObject.tag == "Tower2" && !isMerged)
-        {
-            isMerged = true;
-            Debug.Log("tower2 detected and is merging");
-            StartCoroutine(WaitTime());
-            Instantiate(tower3Prefab, transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
-            Destroy(gameObject,.25f);
-
-        }
-
     }
-    IEnumerator WaitTime()
+
+    private GameObject GetMergeResult(string tag)
     {
-        isMerged = true;
+        if (tag == "Tower1") return tower2Prefab;
+        if (tag == "Tower2") return tower3Prefab;
+        Debug.Log($"Merging Tower2 into: {tower3Prefab}");
 
-        yield return new WaitForSeconds(3);
-
-        isMerged = false;
-
-
-
-        Debug.Log("can merge now");
+        return null;
     }
 
+    private Vector3 GetMouseWorldPosition(float z)
+    {
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = z;
+        return Camera.main.ScreenToWorldPoint(mousePosition);
+    }
 
-
+    public void SetSpawnNode(Transform node)
+    {
+        spawnNode = node;
+    }
 }

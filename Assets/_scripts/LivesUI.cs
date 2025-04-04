@@ -21,7 +21,7 @@ public class LivesUI : MonoBehaviour
     }
     private void Update()
     {
-        HealthText.text = "HEALTH " + PlayerLives.Health.ToString();
+        HealthText.text =  PlayerLives.Health.ToString();
 
         
 
