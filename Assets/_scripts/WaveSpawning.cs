@@ -23,7 +23,11 @@ public class WaveSpawning : MonoBehaviour
   
 
     private int waveNumber = 0;
-  
+
+    private float enemyCheckDelay = 2f;
+    private float lastEnemyCheckTime = 0f;
+
+
 
     public GameObject buildPhasePanel;
     public TMP_Text waveText;
@@ -54,7 +58,7 @@ public class WaveSpawning : MonoBehaviour
         }
 
         // Check if the wave is complete (all enemies dead)
-        if (!isWaveComplete && EnemiesAlive == 0 && waveNumber < waves.Length)
+        if (!isWaveComplete && Time.time - lastEnemyCheckTime > enemyCheckDelay && EnemiesAlive == 0)
         {
             isWaveComplete = true; // Mark wave as complete
             Debug.Log("Wave Complete. Show build phase UI.");
