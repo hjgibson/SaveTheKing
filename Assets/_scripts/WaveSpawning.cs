@@ -24,7 +24,7 @@ public class WaveSpawning : MonoBehaviour
 
     private int waveNumber = 0;
 
-    private float enemyCheckDelay = 0.5f;
+    private float enemyCheckDelay = 2f;
     private float lastEnemyCheckTime = 0f;
 
 
