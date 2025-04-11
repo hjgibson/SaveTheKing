@@ -5,7 +5,7 @@ using UnityEngine;
 public class BombManager : MonoBehaviour
 {
     public GameObject bomb;
-    public static int bombcount = 15;
+    public static int bombcount = 0;
     private Camera cam;
     private bool holdingdown;
 
