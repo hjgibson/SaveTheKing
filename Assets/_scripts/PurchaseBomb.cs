@@ -8,6 +8,7 @@ public class PurchaseBomb : MonoBehaviour
     public static int bombcount;
     public static int gold;
     public int bombCost;
+   
 
     public void buybomb()
     {

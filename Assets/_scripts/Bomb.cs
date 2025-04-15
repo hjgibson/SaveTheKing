@@ -38,4 +38,10 @@ public class Bomb : MonoBehaviour
         
         gameObject.SetActive(false);
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+
+    }
 }
