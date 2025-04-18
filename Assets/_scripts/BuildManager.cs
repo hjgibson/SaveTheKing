@@ -24,7 +24,8 @@ public class BuildManager : MonoBehaviour
 
     private void Start()
     {
-            turretToBuild = standarTurretPrefab;
+        upgraded = false;
+        turretToBuild = standarTurretPrefab;
         
         //cooldown = new Cooldown(10); //cooldownImage);
         
