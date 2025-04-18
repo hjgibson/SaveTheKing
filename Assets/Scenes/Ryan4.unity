@@ -8145,6 +8145,7 @@ GameObject:
   - component: {fileID: 397031339}
   - component: {fileID: 397031338}
   - component: {fileID: 397031341}
+  - component: {fileID: 397031342}
   m_Layer: 5
   m_Name: CooldownUpgrade
   m_TagString: Untagged
@@ -8280,9 +8281,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeCost: 1
   cooldownImage: {fileID: 0}
-  upgraded: 0
+  timer: 10
   standarTurretPrefab: {fileID: 33042361363596863, guid: 66c5baeaedcc3d940b8cd6902847861b,
     type: 3}
+--- !u!114 &397031342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397031335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a8c03c7197709468cd48f09be20c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeCost: 1
+  bombCost: 0
 --- !u!4 &397479751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115266615038074096, guid: a7413aea19637af4686b3bb74abc4866,
@@ -30879,6 +30894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3a8c03c7197709468cd48f09be20c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeCost: 0
   bombCost: 15
 --- !u!4 &1498743989 stripped
 Transform:
@@ -36660,7 +36676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 300
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
   m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,

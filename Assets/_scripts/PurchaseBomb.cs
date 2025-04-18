@@ -7,7 +7,9 @@ public class PurchaseBomb : MonoBehaviour
 {
     public static int bombcount;
     public static int gold;
+    public int upgradeCost;
     public int bombCost;
+    public static int timer;
    
 
     public void buybomb()
@@ -16,6 +18,21 @@ public class PurchaseBomb : MonoBehaviour
         {
           PlayerStats.gold -= bombCost;
           BombManager.bombcount++;
+        }
+        else
+        {
+            Debug.Log("not enough gold");
+        }
+
+    }
+
+    public void UpgradeCooldown()
+    {
+        if (PlayerStats.gold >= upgradeCost)
+        {
+            PlayerStats.gold -= upgradeCost;
+            //BuildManager.timer -= 5;
+            Debug.Log("upgraded");
         }
         else
         {
