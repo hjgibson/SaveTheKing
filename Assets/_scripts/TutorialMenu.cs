@@ -5,34 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class TutorialMenu : MonoBehaviour
 {
+    public GameObject tutorialPopup;
 
-    public GameObject TutorialMenuUI;
-    public GameObject XButton;
-
+    private bool isOpen = false;
 
     void Start()
     {
-       
-        TutorialMenuUI.SetActive(true);
-
-      
-        Time.timeScale = 0f;
-
+        // Ensure popup is hidden and time is running at game start
+        if (tutorialPopup.activeSelf)
+        {
+            tutorialPopup.SetActive(false);
+        }
         
     }
 
-  
-    public void CloseTutorial()
+    public void TogglePopup()
     {
+        isOpen = !isOpen;
+        tutorialPopup.SetActive(isOpen);
 
-        TutorialMenuUI.SetActive(false);
-
-        Time.timeScale = 1f;
+        // Pause or resume time
+       // Time.timeScale = isOpen ? 0f : 1f;
     }
-
-
-
-
-
-
 }
+

@@ -20,6 +20,9 @@ public class Enemy : MonoBehaviour
 
     public Image healthBar;
 
+
+  
+
     void Start ()
     {
         path = Waypoints.waypoint[0];
@@ -41,18 +44,29 @@ public class Enemy : MonoBehaviour
     void Die ()
     {
 
-        WaveSpawning.EnemiesAlive--;
+        
         PlayerStats.Points += pointamount;
         PlayerStats.gold += goldamount;
+
+      
+        Destroy(gameObject);
         WaveSpawning.EnemiesAlive--;
+
         if (WaveSpawning.EnemiesAlive < 0)
         {
             WaveSpawning.EnemiesAlive = 0;
         }
-        Destroy(gameObject);
+
+
     }
     void Update ()
     {
+
+        if (WaveSpawning.EnemiesAlive < 0)
+        {
+            Debug.LogError("ERROR: EnemiesAlive went negative!");
+            WaveSpawning.EnemiesAlive = 0;
+        }
         Vector3 dir = path.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
@@ -89,16 +103,18 @@ public class Enemy : MonoBehaviour
         PlayerLives.Health -= enemyDamage;
 
 
-        WaveSpawning.EnemiesAlive--;
+      
+
+        Destroy(gameObject);
 
         WaveSpawning.EnemiesAlive--;
+
+
         if (WaveSpawning.EnemiesAlive < 0)
         {
             WaveSpawning.EnemiesAlive = 0;
         }
 
-        Destroy(gameObject);
-     
     }
 
    

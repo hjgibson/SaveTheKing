@@ -32,6 +32,10 @@ public class Node : MonoBehaviour
     // public int maxTowers;
 
     // public GameObject tower2Prefab;
+    private void Update()
+    {
+        cooldown = BuildManager.instance.GetCooldown();
+    }
 
 
     private void Start()
