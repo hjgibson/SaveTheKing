@@ -20,7 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Jewel's scene.unity
     guid: d73b6fc5c06011a45af477b2fded5e4a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/old news.unity
     guid: a7b742ba7d52b78468634ff755959dcf
+  - enabled: 1
+    path: Assets/Scenes/GAMESCENELVL1.unity
+    guid: ed1984d2eeae0d445b3d922e0b469db0
   m_configObjects: {}
