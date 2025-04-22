@@ -4989,7 +4989,7 @@ GameObject:
   - component: {fileID: 217098460}
   - component: {fileID: 217098459}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Towercooldown text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15346,6 +15346,7 @@ RectTransform:
   - {fileID: 352521882}
   - {fileID: 605335765}
   - {fileID: 314908379}
+  - {fileID: 217098458}
   - {fileID: 1842457213}
   - {fileID: 515704629}
   - {fileID: 812256926}
@@ -15353,7 +15354,6 @@ RectTransform:
   - {fileID: 1878523927}
   - {fileID: 1031520452}
   - {fileID: 643280849}
-  - {fileID: 217098458}
   - {fileID: 1359258191}
   - {fileID: 1891083251}
   - {fileID: 960131104}
