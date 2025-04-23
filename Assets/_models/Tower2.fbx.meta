@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Details
-    second: {fileID: 2100000, guid: 6573c5e4ea2ba714db60c4512867aadf, type: 2}
+    second: {fileID: 2100000, guid: c7d03833a31217c4098f345f2f736f9a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TowerBases
-    second: {fileID: 2100000, guid: c7fafc6af776d7048b55a15cf278b9c6, type: 2}
+    second: {fileID: 2100000, guid: ec0058fd63c3cf7459bec51af072f427, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
