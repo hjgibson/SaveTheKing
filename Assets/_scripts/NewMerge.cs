@@ -10,7 +10,7 @@ public class NewMerge : MonoBehaviour
     private float offsetX, offsetY, offsetZ;
     private bool isDragging = false;
 
-
+    private Vector3 dragOffset;
 
     public static bool isMerged;
 
@@ -39,6 +39,7 @@ public class NewMerge : MonoBehaviour
                     isDragging = true;
 
                     Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.position);
+                   // dragOffset = transform.position -  mousePosition + new Vector3(0,0.03f,0);
                     offsetX = 0;
                     offsetY = 0;
                     offsetZ = screenPoint.z;
@@ -50,7 +51,7 @@ public class NewMerge : MonoBehaviour
         {
             Vector3 screenMousePosition = new Vector3(Input.mousePosition.x - offsetX, Input.mousePosition.y - offsetY, offsetZ);
             mousePosition = Camera.main.ScreenToWorldPoint(screenMousePosition);
-            transform.position = mousePosition;
+            transform.position = mousePosition;// + dragOffset;
         }
 
         if (Input.GetMouseButtonUp(0))
