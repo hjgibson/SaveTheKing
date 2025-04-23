@@ -14951,6 +14951,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
 <<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+<<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
 --- !u!1001 &736382756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15020,6 +15021,8 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7413aea19637af4686b3bb74abc4866, type: 3}
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
 =======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
 --- !u!1 &735321117
@@ -15140,6 +15143,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
 <<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+<<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+>>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
 =======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
@@ -20572,6 +20578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
 <<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+<<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
 --- !u!1001 &977367281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20641,6 +20648,8 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7413aea19637af4686b3bb74abc4866, type: 3}
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
 =======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
 --- !u!1 &976528904
@@ -20772,6 +20781,9 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+<<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+>>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
 =======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
@@ -22986,6 +22998,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
 <<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+<<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
 --- !u!1001 &1082965342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23057,6 +23070,8 @@ PrefabInstance:
 =======
 =======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
 --- !u!1 &1085700391
 GameObject:
   m_ObjectHideFlags: 0
@@ -23094,6 +23109,9 @@ RectTransform:
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 <<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+<<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+>>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
 =======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
@@ -45267,6 +45285,9 @@ SceneRoots:
   - {fileID: 8399577771270614852}
   - {fileID: 976528906}
 <<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+<<<<<<< Updated upstream:Assets/Scenes/Ryan's Scene 3.unity
+>>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
 =======
 >>>>>>> Stashed changes:Assets/Scenes/GAMESCENELVL1.unity
