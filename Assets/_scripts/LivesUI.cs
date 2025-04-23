@@ -13,7 +13,7 @@ public class LivesUI : MonoBehaviour
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI GoldText;
     public TextMeshProUGUI BombcountText;
-
+   
     public void Start()
     {
       cooldown = FindAnyObjectByType<Cooldown>();

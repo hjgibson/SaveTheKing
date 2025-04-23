@@ -3527,7 +3527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cooldown upgrades from 10 seconds to 5.
+  m_text: Every upgrade takes 1 second off your tower cooldown.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
   m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
@@ -4989,7 +4989,7 @@ GameObject:
   - component: {fileID: 217098460}
   - component: {fileID: 217098459}
   m_Layer: 5
-  m_Name: Towercooldown text
+  m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8279,6 +8279,7 @@ GameObject:
   - component: {fileID: 397031340}
   - component: {fileID: 397031339}
   - component: {fileID: 397031338}
+  - component: {fileID: 397031343}
   - component: {fileID: 397031341}
   - component: {fileID: 397031342}
   m_Layer: 5
@@ -8414,9 +8415,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2555a2f9b2e5b38499b7b0154cadc5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeCost: 150
   cooldownImage: {fileID: 0}
+  upgradeNum: 0
   timer: 10
+  UpgradesCost: {fileID: 1816813795}
   standarTurretPrefab: {fileID: 33042361363596863, guid: 66c5baeaedcc3d940b8cd6902847861b,
     type: 3}
 --- !u!114 &397031342
@@ -8433,6 +8435,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeCost: 1
   bombCost: 0
+--- !u!114 &397031343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397031335}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f0604bf703f7d43af9058f292ec5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 10
 --- !u!4 &397479751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115266615038074096, guid: a7413aea19637af4686b3bb74abc4866,
@@ -15343,14 +15358,14 @@ RectTransform:
   - {fileID: 189315614}
   - {fileID: 13980376}
   - {fileID: 1677227319}
+  - {fileID: 217098458}
   - {fileID: 352521882}
   - {fileID: 605335765}
   - {fileID: 314908379}
-  - {fileID: 217098458}
+  - {fileID: 1971603620}
   - {fileID: 1842457213}
   - {fileID: 515704629}
   - {fileID: 812256926}
-  - {fileID: 1971603620}
   - {fileID: 1878523927}
   - {fileID: 1031520452}
   - {fileID: 643280849}
@@ -25108,6 +25123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighscoreText: {fileID: 352521883}
   startPoints: 0
+  startGold: 0
 --- !u!114 &1232031745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36843,7 +36859,7 @@ GameObject:
   - component: {fileID: 1816813796}
   - component: {fileID: 1816813795}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: UpgradeCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

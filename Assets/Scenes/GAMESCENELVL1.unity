@@ -578,7 +578,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 279, y: -37.87}
+  m_AnchoredPosition: {x: 279, y: -37.03}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &13980377
@@ -10489,12 +10489,12 @@ PrefabInstance:
     - target: {fileID: 6583608634055234965, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -12.019989
+      value: -12.02002
       objectReference: {fileID: 0}
     - target: {fileID: 6583608634055234965, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 62.88
+      value: 62.880005
       objectReference: {fileID: 0}
     - target: {fileID: 6583608634055234965, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
@@ -15577,8 +15577,9 @@ MonoBehaviour:
   - enemyTypes:
     - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
     - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
-    count: 3
-    rate: 1
+    - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
+    count: 1
+    rate: 2
   - enemyTypes:
     - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
     - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
@@ -15628,10 +15629,41 @@ MonoBehaviour:
     count: 50
     rate: 2
   - enemyTypes:
+    - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
+    - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
     - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
-    - {fileID: 6856708684778377056, guid: 203d92cf1b0acbb40a22001096ea6822, type: 3}
-    count: 3
-    rate: 0.5
+    count: 60
+    rate: 3
+  - enemyTypes:
+    - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
+    - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
+    - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
+    count: 65
+    rate: 2
+  - enemyTypes:
+    - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
+    - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
+    - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
+    count: 70
+    rate: 3
+  - enemyTypes:
+    - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
+    - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
+    - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
+    count: 70
+    rate: 2
+  - enemyTypes:
+    - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
+    - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
+    - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
+    count: 75
+    rate: 2
+  - enemyTypes:
+    - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
+    - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
+    - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
+    count: 80
+    rate: 1
   spawnPoint: {fileID: 805401121}
   timeBetweenWaves: 3
   buildPhasePanel: {fileID: 1344019872}
@@ -39144,7 +39176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -149, y: 137.4}
+  m_AnchoredPosition: {x: -149, y: 168}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891083252

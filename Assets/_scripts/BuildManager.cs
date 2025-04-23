@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,11 +11,13 @@ public class BuildManager : MonoBehaviour
 
     private static Cooldown cooldown;
     public static int gold;
-    public int upgradeCost;
+    public static int upgradeCost;
     public Image cooldownImage;
+    
     public int timer;
+    public TextMeshProUGUI UpgradesCost;
 
-   //public bool upgraded;
+    //public bool upgraded;
 
     private void Awake()
     {
@@ -25,6 +28,8 @@ public class BuildManager : MonoBehaviour
 
     private void Start()
     {
+        timer = 10;
+        upgradeCost = 20;
         //upgraded = false;
         turretToBuild = standarTurretPrefab;
         
@@ -35,6 +40,15 @@ public class BuildManager : MonoBehaviour
     private void Update()
     {
         CooldownTime();
+        if (timer > 5)
+        {
+            UpgradesCost.text = "" + upgradeCost.ToString();
+        }
+        else
+        {
+            UpgradesCost.text = "MAX";
+        }
+        
     }
     private GameObject turretToBuild;
 
@@ -82,23 +96,47 @@ public class BuildManager : MonoBehaviour
 
 
     }
-    
+
     public void UpgradeCooldown()
     {
-        if (PlayerStats.gold >= upgradeCost)
+        if (timer > 5)
         {
-            PlayerStats.gold -= upgradeCost;
-            timer = 5;
-            //upgraded = true;
+            if (PlayerStats.gold >= upgradeCost)
+            {
+                PlayerStats.gold -= upgradeCost;
+                timer--;
+                upgradeCost += 20;
+               
+                //upgraded = true;
+            }
+            else
+            {
+                Debug.Log("not enough gold");
+            }
         }
         else
         {
-            Debug.Log("not enough gold");
+           
         }
+      
 
     }
+    /* public void UpgradeCooldown()
+     {
+         if (PlayerStats.gold >= upgradeCost)
+         {
+             PlayerStats.gold -= upgradeCost;
+             timer = 5;
+             //upgraded = true;
+         }
+         else
+         {
+             Debug.Log("not enough gold");
+         }
 
+     }
 
+     */
     // private void Update()
     //{
     //  if(cooldown != null && cooldown.IsCoolingDown())
@@ -106,5 +144,5 @@ public class BuildManager : MonoBehaviour
     //      cooldown.UpdateCooldownUI();
     //  }
     // }
-    
+
 }
