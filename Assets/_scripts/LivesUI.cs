@@ -12,7 +12,8 @@ public class LivesUI : MonoBehaviour
     public TextMeshProUGUI cooldownText;
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI GoldText;
-
+    public TextMeshProUGUI BombcountText;
+   
     public void Start()
     {
       cooldown = FindAnyObjectByType<Cooldown>();
@@ -31,6 +32,8 @@ public class LivesUI : MonoBehaviour
         ScoreText.text = "Score " + PlayerStats.Points.ToString();
 
         GoldText.text = "Gold " + PlayerStats.gold.ToString();
+
+        BombcountText.text = "Bombcount " + BombManager.bombcount.ToString();
      
     }
 

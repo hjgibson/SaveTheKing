@@ -64,6 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: ab9df02350fcc0a4fbabd341928655b0, type: 2}
+  - {fileID: 2100000, guid: 68e0c21f3369cc44ead656915c2473a1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,4 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   enemyDamage: 30
-  health: 200
+  startHealth: 100
+  Points: 0
+  goldamount: 0
+  pointamount: 0
+  healthBar: {fileID: 0}

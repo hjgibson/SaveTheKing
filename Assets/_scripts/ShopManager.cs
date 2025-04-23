@@ -9,6 +9,9 @@ public class ShopManager : MonoBehaviour
 
     public static bool GameIsPaused = false;
 
+    public static int gold;
+    public int bombcount;
+    public GameObject buy;
 
     // public GameObject PauseMenuUI;
     public GameObject shopButton;
@@ -25,6 +28,8 @@ public class ShopManager : MonoBehaviour
     {
 
     }
+
+   
 
     public void TogglePause()
     {

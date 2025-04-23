@@ -93,3 +93,5 @@ MonoBehaviour:
   waves: []
   spawnPoint: {fileID: 0}
   timeBetweenWaves: 20
+  buildPhasePanel: {fileID: 0}
+  waveText: {fileID: 0}

@@ -9,10 +9,12 @@ public class PlayerStats : MonoBehaviour
     public static int gold;
     public TextMeshProUGUI HighscoreText;
     public int startPoints = 0;
+    public int startGold = 0;
 
     private void Start()
     {
         Points = startPoints;
+        gold = startGold;
     }
 
     private void Update()

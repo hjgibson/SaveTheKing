@@ -360,6 +360,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 671951514952199668, guid: 56fe295c69788ca46bc8bbd24f35dc50,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 942465131986600997, guid: 56fe295c69788ca46bc8bbd24f35dc50,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -383,7 +388,7 @@ PrefabInstance:
     - target: {fileID: 942465131986600997, guid: 56fe295c69788ca46bc8bbd24f35dc50,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 942465131986600997, guid: 56fe295c69788ca46bc8bbd24f35dc50,
         type: 3}
@@ -453,7 +458,7 @@ PrefabInstance:
     - target: {fileID: 4442128864192191537, guid: 56fe295c69788ca46bc8bbd24f35dc50,
         type: 3}
       propertyPath: goldamount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4442128864192191537, guid: 56fe295c69788ca46bc8bbd24f35dc50,
         type: 3}
