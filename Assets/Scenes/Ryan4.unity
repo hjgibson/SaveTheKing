@@ -25124,7 +25124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighscoreText: {fileID: 352521883}
   startPoints: 0
-  startGold: 300
+  startGold: 0
 --- !u!114 &1232031745
 MonoBehaviour:
   m_ObjectHideFlags: 0
