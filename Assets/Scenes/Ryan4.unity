@@ -578,11 +578,19 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_AnchoredPosition: {x: 279, y: -41.21}
 ========
   m_AnchoredPosition: {x: 279, y: -37.87}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_AnchoredPosition: {x: 279, y: -37.87}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_AnchoredPosition: {x: 279, y: -41.21}
+>>>>>>> origin/jewel
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &13980377
@@ -2288,6 +2296,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7413aea19637af4686b3bb74abc4866, type: 3}
+<<<<<<< HEAD
 --- !u!1 &80415557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2324,6 +2333,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> origin/jewel
 --- !u!1 &80662396
 GameObject:
   m_ObjectHideFlags: 0
@@ -3544,11 +3555,19 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_AnchoredPosition: {x: 100.7, y: -92}
 ========
   m_AnchoredPosition: {x: 76.8, y: -85.7}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_AnchoredPosition: {x: 76.8, y: -85.7}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_AnchoredPosition: {x: 100.7, y: -85.7}
+>>>>>>> origin/jewel
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &152446681
@@ -3571,12 +3590,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_text: Every upgrade takes 1 second off your tower cooldown. Upgrade maxes out
     at 5.
 ========
   m_text: Cooldown upgrades from 10 seconds to 5.
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_text: Cooldown upgrades from 10 seconds to 5.
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_text: Every upgrade takes 1 second off your tower cooldown.
+>>>>>>> origin/jewel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
   m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
@@ -4567,11 +4594,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_text: 
 ========
   m_text: Health
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_text: Health
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_text: 
+>>>>>>> origin/jewel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
   m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
@@ -4665,11 +4700,19 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_AnchoredPosition: {x: 91, y: -42}
 ========
   m_AnchoredPosition: {x: 124.8, y: -36.2}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_AnchoredPosition: {x: 124.8, y: -36.2}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_AnchoredPosition: {x: 91, y: -42}
+>>>>>>> origin/jewel
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!1001 &191165448
@@ -8336,10 +8379,17 @@ GameObject:
   - component: {fileID: 397031340}
   - component: {fileID: 397031339}
   - component: {fileID: 397031338}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   - component: {fileID: 397031343}
 ========
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  - component: {fileID: 397031343}
+>>>>>>> origin/jewel
   - component: {fileID: 397031341}
   - component: {fileID: 397031342}
   m_Layer: 5
@@ -8366,11 +8416,19 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_AnchoredPosition: {x: 71.29996, y: -58.7}
 ========
   m_AnchoredPosition: {x: 47.1, y: -58.7}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_AnchoredPosition: {x: 47.1, y: -58.7}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_AnchoredPosition: {x: 71.29996, y: -58.7}
+>>>>>>> origin/jewel
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397031338
@@ -8480,6 +8538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownImage: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   timer: 10
   UpgradesCost: {fileID: 1816813795}
@@ -8487,6 +8547,15 @@ MonoBehaviour:
   timer: 0
   UpgradesCost: {fileID: 0}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  timer: 0
+  UpgradesCost: {fileID: 0}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  upgradeNum: 0
+  timer: 10
+  UpgradesCost: {fileID: 1816813795}
+>>>>>>> origin/jewel
   standarTurretPrefab: {fileID: 33042361363596863, guid: 66c5baeaedcc3d940b8cd6902847861b,
     type: 3}
 --- !u!114 &397031342
@@ -8503,7 +8572,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeCost: 1
   bombCost: 0
+<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
+=======
+>>>>>>> origin/jewel
 --- !u!114 &397031343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8517,8 +8590,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 10
+<<<<<<< HEAD
 ========
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> origin/jewel
 --- !u!4 &397479751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115266615038074096, guid: a7413aea19637af4686b3bb74abc4866,
@@ -9657,6 +9735,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7413aea19637af4686b3bb74abc4866, type: 3}
+<<<<<<< HEAD
 --- !u!1 &458287410
 GameObject:
   m_ObjectHideFlags: 0
@@ -9732,6 +9811,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458287410}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> origin/jewel
 --- !u!4 &458708480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115266615038074096, guid: a7413aea19637af4686b3bb74abc4866,
@@ -10605,20 +10686,36 @@ PrefabInstance:
     - target: {fileID: 6583608634055234965, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
       propertyPath: m_SizeDelta.x
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       value: 102.2
 ========
       value: 72.4
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+      value: 72.4
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+      value: 102.2
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 6583608634055234965, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
       propertyPath: m_SizeDelta.y
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       value: 84.9
 ========
       value: 58.2
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+      value: 58.2
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+      value: 84.9
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 6583608634055234965, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
@@ -10658,20 +10755,36 @@ PrefabInstance:
     - target: {fileID: 6583608634055234965, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
       propertyPath: m_AnchoredPosition.x
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       value: 2.7000732
 ========
       value: -12.02002
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+      value: -12.02002
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+      value: 2.7000732
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 6583608634055234965, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       value: 59.43
 ========
       value: 62.880005
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+      value: 62.880005
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+      value: 59.43
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 6583608634055234965, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
@@ -10688,14 +10801,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 ========
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
     - target: {fileID: 7834590583020161150, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 1.906229
       objectReference: {fileID: 0}
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> origin/jewel
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11025,11 +11147,19 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_AnchoredPosition: {x: -84.4, y: 50.1}
 ========
   m_AnchoredPosition: {x: -84.4, y: 15.1}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_AnchoredPosition: {x: -84.4, y: 15.1}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_AnchoredPosition: {x: -84.4, y: 15.1}
+>>>>>>> origin/jewel
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538215733
@@ -11723,6 +11853,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 567757178}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &571422273
 GameObject:
   m_ObjectHideFlags: 0
@@ -11858,6 +11989,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571422273}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> origin/jewel
 --- !u!1001 &574751214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14304,8 +14437,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1348785908}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 ========
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
 --- !u!1 &735321117
 GameObject:
   m_ObjectHideFlags: 0
@@ -14423,7 +14560,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> origin/jewel
 --- !u!1001 &744556817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14924,11 +15066,19 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_AnchoredPosition: {x: -84.4, y: -75}
 ========
   m_AnchoredPosition: {x: -84.4, y: -65.4}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_AnchoredPosition: {x: -84.4, y: -65.4}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_AnchoredPosition: {x: -84.4, y: -65.4}
+>>>>>>> origin/jewel
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759839766
@@ -15345,6 +15495,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766402093}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1 &768825712
 GameObject:
   m_ObjectHideFlags: 0
@@ -15420,6 +15571,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768825712}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> origin/jewel
 --- !u!4 &773849746 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115266615038074096, guid: 06bfed4d3d600034a8bc615a7cda2630,
@@ -15772,11 +15925,19 @@ MonoBehaviour:
   cooldownText: {fileID: 605335763}
   ScoreText: {fileID: 1677227320}
   GoldText: {fileID: 13980377}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   BombcountText: {fileID: 1878523928}
 ========
   BombcountText: {fileID: 0}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  BombcountText: {fileID: 0}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  BombcountText: {fileID: 1878523928}
+>>>>>>> origin/jewel
 --- !u!114 &785362107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15870,7 +16031,11 @@ RectTransform:
   - {fileID: 189315614}
   - {fileID: 13980376}
   - {fileID: 1677227319}
+<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
+=======
+>>>>>>> origin/jewel
   - {fileID: 217098458}
   - {fileID: 352521882}
   - {fileID: 605335765}
@@ -15882,10 +16047,16 @@ RectTransform:
   - {fileID: 1878523927}
   - {fileID: 1031520452}
   - {fileID: 643280849}
+<<<<<<< HEAD
 ========
   - {fileID: 352521882}
   - {fileID: 605335765}
   - {fileID: 314908379}
+========
+  - {fileID: 352521882}
+  - {fileID: 605335765}
+  - {fileID: 314908379}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
   - {fileID: 1842457213}
   - {fileID: 515704629}
   - {fileID: 812256926}
@@ -15894,7 +16065,12 @@ RectTransform:
   - {fileID: 1031520452}
   - {fileID: 643280849}
   - {fileID: 217098458}
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> origin/jewel
   - {fileID: 1359258191}
   - {fileID: 1891083251}
   - {fileID: 960131104}
@@ -16113,6 +16289,8 @@ MonoBehaviour:
   - enemyTypes:
     - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
     - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
     - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
     count: 1
@@ -16121,6 +16299,15 @@ MonoBehaviour:
     count: 3
     rate: 1
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+    count: 3
+    rate: 1
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+    - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
+    count: 1
+    rate: 2
+>>>>>>> origin/jewel
   - enemyTypes:
     - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
     - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
@@ -16170,7 +16357,11 @@ MonoBehaviour:
     count: 50
     rate: 2
   - enemyTypes:
+<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
+=======
+>>>>>>> origin/jewel
     - {fileID: 3366688754080726586, guid: d543e8821c645fc4c9e29af66d92da02, type: 3}
     - {fileID: 4127547242835164930, guid: bf6727b62e561524cbde2d591be92cde, type: 3}
     - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
@@ -16206,12 +16397,20 @@ MonoBehaviour:
     - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
     count: 80
     rate: 1
+<<<<<<< HEAD
 ========
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
     - {fileID: 6856708684778377056, guid: 6cee70cb3118e7c46bee14c3bc16e9d4, type: 3}
     - {fileID: 6856708684778377056, guid: 203d92cf1b0acbb40a22001096ea6822, type: 3}
     count: 3
     rate: 0.5
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> origin/jewel
   spawnPoint: {fileID: 805401121}
   timeBetweenWaves: 3
   buildPhasePanel: {fileID: 1344019872}
@@ -20209,8 +20408,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1851960714}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 ========
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
 --- !u!1 &976528904
 GameObject:
   m_ObjectHideFlags: 0
@@ -20339,7 +20542,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> origin/jewel
 --- !u!1001 &979096356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20992,8 +21200,12 @@ RectTransform:
   - {fileID: 538215732}
   - {fileID: 759839765}
   - {fileID: 152446680}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   - {fileID: 1517589682}
+=======
+>>>>>>> origin/jewel
   m_Father: {fileID: 785362111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -21001,15 +21213,25 @@ RectTransform:
   m_AnchoredPosition: {x: 258.7, y: 0}
   m_SizeDelta: {x: 286.6, y: 386}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
 ========
   m_Father: {fileID: 785362111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+========
+  m_Father: {fileID: 785362111}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 236.5, y: 386}
   m_Pivot: {x: 1, y: 0.5}
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> origin/jewel
 --- !u!114 &1031520453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22389,8 +22611,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 142852393}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 ========
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
 --- !u!1 &1085700391
 GameObject:
   m_ObjectHideFlags: 0
@@ -22427,7 +22653,12 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> origin/jewel
 --- !u!4 &1086812966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115266615038074096, guid: a7413aea19637af4686b3bb74abc4866,
@@ -23397,7 +23628,11 @@ PrefabInstance:
     - target: {fileID: 2341210929371115607, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
       propertyPath: m_fontSize
+<<<<<<< HEAD
       value: 36
+=======
+      value: 30
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 2341210929371115607, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
@@ -23408,7 +23643,11 @@ PrefabInstance:
     - target: {fileID: 2341210929371115607, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
       propertyPath: m_fontSizeBase
+<<<<<<< HEAD
       value: 36
+=======
+      value: 30
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 2341210929371115607, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
@@ -23420,6 +23659,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       objectReference: {fileID: 0}
     - target: {fileID: 2341210929371115607, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
@@ -23431,6 +23672,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+========
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 3603330586513233605, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
@@ -23465,38 +23710,70 @@ PrefabInstance:
     - target: {fileID: 4197455784410070537, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
       propertyPath: m_SizeDelta.x
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       value: 63.89
 ========
       value: 53.4
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+      value: 53.4
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+      value: 63.89
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 4197455784410070537, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
       propertyPath: m_SizeDelta.y
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       value: 32.6
 ========
       value: 43.3
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+      value: 43.3
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+      value: 32.6
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 4197455784410070537, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
       propertyPath: m_AnchoredPosition.x
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       value: 24.3
 ========
       value: 26.4
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+      value: 26.4
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+      value: 24.3
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 4197455784410070537, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       value: -206.3
 ========
       value: -189.6
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+      value: -189.6
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+      value: -206.3
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 4282331826488863033, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
@@ -23659,6 +23936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+<<<<<<< HEAD
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4626557088048216753, guid: 44bc04dbe5143c24a9e77472f6912c98,
         type: 3}
@@ -23672,6 +23950,11 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1138904251}
   m_PrefabAsset: {fileID: 0}
+=======
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44bc04dbe5143c24a9e77472f6912c98, type: 3}
+>>>>>>> origin/jewel
 --- !u!4 &1139705504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115266615038074096, guid: a7413aea19637af4686b3bb74abc4866,
@@ -28921,11 +29204,19 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_AnchoredPosition: {x: 79.7, y: -36.86}
 ========
   m_AnchoredPosition: {x: 103.9, y: -45.6}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_AnchoredPosition: {x: 103.9, y: -45.6}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_AnchoredPosition: {x: 79.7, y: -36.86}
+>>>>>>> origin/jewel
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1359258192
@@ -31773,11 +32064,19 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_AnchoredPosition: {x: 71.3, y: 50.1}
 ========
   m_AnchoredPosition: {x: 44.7, y: 15.1}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_AnchoredPosition: {x: 44.7, y: 15.1}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_AnchoredPosition: {x: 71.3, y: 15.1}
+>>>>>>> origin/jewel
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1492585316
@@ -32078,6 +32377,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 699881022}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1517589681
 GameObject:
   m_ObjectHideFlags: 0
@@ -32214,6 +32514,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517589681}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> origin/jewel
 --- !u!4 &1519292187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115266615038074096, guid: a7413aea19637af4686b3bb74abc4866,
@@ -37759,11 +38061,19 @@ GameObject:
   - component: {fileID: 1816813796}
   - component: {fileID: 1816813795}
   m_Layer: 5
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_Name: UpgradeCost
 ========
   m_Name: Text (TMP)
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_Name: Text (TMP)
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_Name: UpgradeCost
+>>>>>>> origin/jewel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38521,11 +38831,19 @@ PrefabInstance:
     - target: {fileID: 2769868480554576243, guid: fc723d0ee9642eb4f82b800b85658e50,
         type: 3}
       propertyPath: m_SizeDelta.y
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       value: 0
 ========
       value: 60.399982
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+      value: 60.399982
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+      value: 0
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 2769868480554576243, guid: fc723d0ee9642eb4f82b800b85658e50,
         type: 3}
@@ -38570,11 +38888,19 @@ PrefabInstance:
     - target: {fileID: 2769868480554576243, guid: fc723d0ee9642eb4f82b800b85658e50,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
       value: 0
 ========
       value: 30.20001
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+      value: 30.20001
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+      value: 0
+>>>>>>> origin/jewel
       objectReference: {fileID: 0}
     - target: {fileID: 2769868480554576243, guid: fc723d0ee9642eb4f82b800b85658e50,
         type: 3}
@@ -38783,11 +39109,19 @@ Transform:
   m_GameObject: {fileID: 1845877202}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_LocalPosition: {x: -39.2, y: 62.6, z: -52.7}
 ========
   m_LocalPosition: {x: -39.2, y: 62.6, z: -49.5}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_LocalPosition: {x: -39.2, y: 62.6, z: -49.5}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_LocalPosition: {x: -39.2, y: 62.6, z: -52.7}
+>>>>>>> origin/jewel
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40103,11 +40437,19 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
   m_AnchoredPosition: {x: -149, y: 163}
 ========
   m_AnchoredPosition: {x: -149, y: 137.4}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  m_AnchoredPosition: {x: -149, y: 137.4}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+  m_AnchoredPosition: {x: -149, y: 163}
+>>>>>>> origin/jewel
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891083252
@@ -42060,6 +42402,7 @@ Transform:
   - {fileID: 552024028}
   m_Father: {fileID: 1107107315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1998168216
 GameObject:
   m_ObjectHideFlags: 0
@@ -42135,6 +42478,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998168216}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> origin/jewel
 --- !u!4 &1998853069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115266615038074096, guid: a7413aea19637af4686b3bb74abc4866,
@@ -44325,7 +44670,14 @@ SceneRoots:
   - {fileID: 1776945508}
   - {fileID: 5152628480980379054}
   - {fileID: 8399577771270614852}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 <<<<<<<< HEAD:Assets/Scenes/Ryan4.unity
 ========
   - {fileID: 976528906}
 >>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
+========
+  - {fileID: 976528906}
+>>>>>>>> origin/jewel:Assets/Scenes/GAMESCENELVL1.unity
+=======
+>>>>>>> origin/jewel
