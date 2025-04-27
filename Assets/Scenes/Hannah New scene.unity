@@ -8483,7 +8483,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownImage: {fileID: 0}
+<<<<<<<< HEAD:Assets/Scenes/Hannah New scene.unity
   timer: 10
+========
+  timer: 0
+>>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
   UpgradesCost: {fileID: 0}
   standarTurretPrefab: {fileID: 33042361363596863, guid: 66c5baeaedcc3d940b8cd6902847861b,
     type: 3}
@@ -23087,6 +23091,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06bfed4d3d600034a8bc615a7cda2630, type: 3}
+<<<<<<<< HEAD:Assets/Scenes/Hannah New scene.unity
 --- !u!1 &1133913368
 GameObject:
   m_ObjectHideFlags: 0
@@ -23136,6 +23141,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 91106112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+========
+>>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
 --- !u!1001 &1134516791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44057,4 +44064,7 @@ SceneRoots:
   - {fileID: 5152628480980379054}
   - {fileID: 8399577771270614852}
   - {fileID: 976528906}
+<<<<<<<< HEAD:Assets/Scenes/Hannah New scene.unity
   - {fileID: 91106112}
+========
+>>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
