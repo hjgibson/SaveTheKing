@@ -39,7 +39,7 @@ public class WaveSpawning : MonoBehaviour
         gameManager = FindObjectOfType<GameOverManager>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Timer += Time.deltaTime;
 
