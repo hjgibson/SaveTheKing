@@ -5057,7 +5057,7 @@ GameObject:
   - component: {fileID: 217098460}
   - component: {fileID: 217098459}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Tower Cooldown UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8484,7 +8484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownImage: {fileID: 0}
   timer: 10
-  UpgradesCost: {fileID: 0}
+  UpgradesCost: {fileID: 1816813795}
   standarTurretPrefab: {fileID: 33042361363596863, guid: 66c5baeaedcc3d940b8cd6902847861b,
     type: 3}
 --- !u!114 &397031342
@@ -15820,6 +15820,7 @@ RectTransform:
   - {fileID: 1677227319}
   - {fileID: 352521882}
   - {fileID: 605335765}
+  - {fileID: 217098458}
   - {fileID: 314908379}
   - {fileID: 1842457213}
   - {fileID: 515704629}
@@ -15828,7 +15829,6 @@ RectTransform:
   - {fileID: 1878523927}
   - {fileID: 1031520452}
   - {fileID: 643280849}
-  - {fileID: 217098458}
   - {fileID: 1359258191}
   - {fileID: 1891083251}
   - {fileID: 960131104}
@@ -22786,7 +22786,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: STASH
+  m_text: Market
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
   m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
@@ -34898,7 +34898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1677227319
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37555,7 +37555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 150
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
   m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
@@ -38493,11 +38493,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -1.31
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 30
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -38522,7 +38522,7 @@ Transform:
   m_GameObject: {fileID: 1845877202}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -39.2, y: 62.6, z: -49.5}
+  m_LocalPosition: {x: -42.6, y: 62.6, z: -53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
