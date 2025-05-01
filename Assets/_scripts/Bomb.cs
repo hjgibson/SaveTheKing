@@ -9,6 +9,7 @@ public class Bomb : MonoBehaviour
     public int explosionRadius;
     private Collider triggeringEnemy;
     public GameObject explosion;
+    public AudioClip explosionSound;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.TryGetComponent<Enemy>(out var enemy))
@@ -34,7 +35,7 @@ public class Bomb : MonoBehaviour
         {
             if (collider == triggeringEnemy) continue;
             if (collider.GetComponent<Enemy>() != null) { Damage(collider.transform); }
-
+            AudioSource.PlayClipAtPoint(explosionSound, transform.position);
             GameObject effectIns = (GameObject)Instantiate(explosion, transform.position, transform.rotation);
             Destroy(effectIns, 0.5f);
         }
