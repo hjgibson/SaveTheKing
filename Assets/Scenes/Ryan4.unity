@@ -31259,7 +31259,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3a8c03c7197709468cd48f09be20c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   upgradeCost: 0
+=======
+>>>>>>> Stashed changes
   bombCost: 15
 --- !u!4 &1498743989 stripped
 Transform:
