@@ -40,7 +40,7 @@ public class NewMerge : MonoBehaviour
 
                     Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.position);
                     offsetX = 0;
-                    offsetY = 0;
+                    offsetY = -100;
                     offsetZ = screenPoint.z;
                 }
             }
