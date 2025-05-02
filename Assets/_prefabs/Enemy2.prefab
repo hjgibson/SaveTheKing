@@ -432,6 +432,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2489209049492856383, guid: 51bd335711d994d4b8b4b4509933a921,
         type: 3}
+      propertyPath: deathAnim
+      value: 
+      objectReference: {fileID: 6600488926900673933, guid: 9359abd071682384b939d4e7c883846a,
+        type: 3}
+    - target: {fileID: 2489209049492856383, guid: 51bd335711d994d4b8b4b4509933a921,
+        type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 7719924156475480934}
