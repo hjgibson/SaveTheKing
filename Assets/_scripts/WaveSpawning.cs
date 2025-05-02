@@ -82,7 +82,8 @@ public class WaveSpawning : MonoBehaviour
     {
         buildPhasePanel.SetActive(true); // Show the build phase panel
         waveText.text = "Wave: " + (waveNumber + 1);
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; // can change to 1 to allow merge to work during build pahse, but it can work endlessly
+        
     }
 
     public void StartNextWave()
