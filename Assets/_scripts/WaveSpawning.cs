@@ -27,7 +27,7 @@ public class WaveSpawning : MonoBehaviour
     private float enemyCheckDelay = 2f;
     private float lastEnemyCheckTime = 0f;
 
-
+    public int CurrentWaveNumber => waveNumber;
 
     public GameObject buildPhasePanel;
     public TMP_Text waveText;
@@ -117,7 +117,13 @@ public class WaveSpawning : MonoBehaviour
         }
 
         waveNumber++;
-        
+
+        HighscoreManager highScoreManager = FindObjectOfType<HighscoreManager>();
+        if (highScoreManager != null)
+        {
+            highScoreManager.TryUpdateHighScore(waveNumber);
+        }
+
         isWaveComplete = false; // Reset wave complete status when the next wave starts
 
     }
