@@ -820,8 +820,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Double tap on green tiles to place down towers, tap on an existing tower
-    to merge it with another tower, see how long you can defend the king for! Good
-    luck!
+    to merge it with another tower. Open the market to buy upgrades or bombs with
+    your gold. Bombs can be placed on the road by clicking on the road when you have
+    them.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10522,6 +10523,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5331545694386856573, guid: 2925990a1b5393941ad6273f3c3c8dce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 12.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894758200090568160, guid: 2925990a1b5393941ad6273f3c3c8dce,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 133.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894758200090568160, guid: 2925990a1b5393941ad6273f3c3c8dce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6583608634055234965, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10621,6 +10637,24 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717081589235166476, guid: 2925990a1b5393941ad6273f3c3c8dce,
+        type: 3}
+      propertyPath: m_text
+      value: Double tap on green tiles to place down towers, tap on an existing tower
+        to merge it with another tower. Open the market to buy upgrades or bombs
+        with your gold. Bombs can be placed on the road by clicking on the road when
+        you have them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717081589235166476, guid: 2925990a1b5393941ad6273f3c3c8dce,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717081589235166476, guid: 2925990a1b5393941ad6273f3c3c8dce,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7834590583020161150, guid: 2925990a1b5393941ad6273f3c3c8dce,
         type: 3}
@@ -22754,7 +22788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: STASH
+  m_text: MARKET
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
   m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
@@ -40602,6 +40636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRadius: 0
+  explosion: {fileID: 0}
+  explosionSound: {fileID: 0}
 --- !u!1001 &1974534644
 PrefabInstance:
   m_ObjectHideFlags: 0
