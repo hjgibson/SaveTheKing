@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     
     private Transform enemyTransform;
     public int pointamount;
-
+    public GameObject deathAnim;
     public Image healthBar;
 
 
@@ -47,8 +47,9 @@ public class Enemy : MonoBehaviour
         
         PlayerStats.Points += pointamount;
         PlayerStats.gold += goldamount;
+        GameObject effectIns = (GameObject)Instantiate(deathAnim, transform.position, transform.rotation);
+        Destroy(effectIns, 0.5f);
 
-      
         Destroy(gameObject);
         WaveSpawning.EnemiesAlive--;
 

@@ -5057,7 +5057,7 @@ GameObject:
   - component: {fileID: 217098460}
   - component: {fileID: 217098459}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Tower Cooldown UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7295,7 +7295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &352521882
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7303,16 +7303,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352521881}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2617801, y: 0.22624435, z: 0.50251263}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 785362111}
+  m_Father: {fileID: 960131104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 534.7, y: -74.8}
+  m_AnchoredPosition: {x: 368.9, y: -171.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &352521883
@@ -7337,8 +7337,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Highscore: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
+  m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7362,8 +7363,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7398,7 +7399,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -1.4855475, z: -68.37636, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8483,12 +8484,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownImage: {fileID: 0}
-<<<<<<<< HEAD:Assets/Scenes/Hannah New scene.unity
   timer: 10
-========
-  timer: 0
->>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
-  UpgradesCost: {fileID: 0}
+  UpgradesCost: {fileID: 1816813795}
   standarTurretPrefab: {fileID: 33042361363596863, guid: 66c5baeaedcc3d940b8cd6902847861b,
     type: 3}
 --- !u!114 &397031342
@@ -15666,6 +15663,7 @@ GameObject:
   - component: {fileID: 785362105}
   - component: {fileID: 785362104}
   - component: {fileID: 785362103}
+  - component: {fileID: 785362112}
   m_Layer: 5
   m_Name: UI  Canvas
   m_TagString: Untagged
@@ -15822,8 +15820,8 @@ RectTransform:
   - {fileID: 189315614}
   - {fileID: 13980376}
   - {fileID: 1677227319}
-  - {fileID: 352521882}
   - {fileID: 605335765}
+  - {fileID: 217098458}
   - {fileID: 314908379}
   - {fileID: 1842457213}
   - {fileID: 515704629}
@@ -15832,7 +15830,6 @@ RectTransform:
   - {fileID: 1878523927}
   - {fileID: 1031520452}
   - {fileID: 643280849}
-  - {fileID: 217098458}
   - {fileID: 1359258191}
   - {fileID: 1891083251}
   - {fileID: 960131104}
@@ -15844,6 +15841,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &785362112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785362102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a219b330f46a6c743bb555b1777ae2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighscoreText: {fileID: 352521883}
 --- !u!4 &790965304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115266615038074096, guid: 06bfed4d3d600034a8bc615a7cda2630,
@@ -19707,7 +19717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &960131102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19758,6 +19768,7 @@ RectTransform:
   m_LocalScale: {x: 3.82, y: 4.42, z: 1.99}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 352521882}
   - {fileID: 1074652685}
   - {fileID: 927884417}
   - {fileID: 1382470509}
@@ -22068,7 +22079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 12.82}
+  m_AnchoredPosition: {x: 0, y: 20.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074652686
@@ -22093,8 +22104,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game Over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
+  m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22790,7 +22802,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: STASH
+  m_text: Market
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
   m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
@@ -22933,8 +22945,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
+  m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23091,7 +23104,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06bfed4d3d600034a8bc615a7cda2630, type: 3}
-<<<<<<<< HEAD:Assets/Scenes/Hannah New scene.unity
 --- !u!1 &1133913368
 GameObject:
   m_ObjectHideFlags: 0
@@ -23141,8 +23153,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 91106112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-========
->>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity
 --- !u!1001 &1134516791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32854,8 +32864,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Replay
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
+  m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34905,7 +34916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1677227319
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37562,7 +37573,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 150
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f848d21597ffe4a8691a5a9f0a89be, type: 2}
   m_sharedMaterial: {fileID: -4358194514063196461, guid: b8f848d21597ffe4a8691a5a9f0a89be,
@@ -38500,11 +38511,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -1.31
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 30
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -38529,7 +38540,7 @@ Transform:
   m_GameObject: {fileID: 1845877202}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -39.2, y: 62.6, z: -49.5}
+  m_LocalPosition: {x: -42.6, y: 62.6, z: -53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40690,6 +40701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRadius: 0
+  explosion: {fileID: 0}
+  explosionSound: {fileID: 0}
 --- !u!1001 &1974534644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44064,7 +44077,4 @@ SceneRoots:
   - {fileID: 5152628480980379054}
   - {fileID: 8399577771270614852}
   - {fileID: 976528906}
-<<<<<<<< HEAD:Assets/Scenes/Hannah New scene.unity
   - {fileID: 91106112}
-========
->>>>>>>> jewel:Assets/Scenes/GAMESCENELVL1.unity

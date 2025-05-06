@@ -11,6 +11,8 @@ public class PlayerStats : MonoBehaviour
     public int startPoints = 0;
     public int startGold = 0;
 
+    private WaveSpawning waveSpawner;
+
     private void Start()
     {
         Points = startPoints;
@@ -30,15 +32,22 @@ public class PlayerStats : MonoBehaviour
 
     void CheckHighScore()
     {
-        if(Points > PlayerPrefs.GetInt("HighScore", 0))
+      
+
+        if (waveSpawner == null) return;
+
+        int currentWave = waveSpawner.CurrentWaveNumber;
+        int savedWaveHighscore = PlayerPrefs.GetInt("WaveHighScore", 0);
+
+        if ( currentWave > savedWaveHighscore )
         {
-            PlayerPrefs.SetInt("HighScore", Points);
-            UpdateHighscoreText();
+            PlayerPrefs.SetInt("WaveHighScore", currentWave);
+            UpdateHighscoreText() ;
         }
     }
 
     void UpdateHighscoreText()
     {
-        HighscoreText.text = $"HighScore: {PlayerPrefs.GetInt("HighScore", 0)}";
+        HighscoreText.text = $"Best Wave: {PlayerPrefs.GetInt("WaveHighScore", 0)}";
     }
 }
