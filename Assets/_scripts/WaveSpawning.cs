@@ -9,7 +9,7 @@ using TMPro;
  */
 public class WaveSpawning : MonoBehaviour
 {
-    public static int EnemiesAlive = 0;
+    public static float EnemiesAlive = 0f;
 
     private GameOverManager gameManager;
 
@@ -51,14 +51,14 @@ public class WaveSpawning : MonoBehaviour
         Debug.Log($"WaveNumber: {waveNumber}, EnemiesAlive: {EnemiesAlive}");
 
         // If enemies are still alive, don't enter build phase
-        if (EnemiesAlive > 0)
+        if (EnemiesAlive > 0f)
         {
             isWaveComplete = false; // Reset wave completion status
             return; // Exit if there are still enemies
         }
 
         // Check if the wave is complete (all enemies dead)
-        if (!isWaveComplete && Time.time - lastEnemyCheckTime > enemyCheckDelay && EnemiesAlive == 0)
+        if (!isWaveComplete && Time.time - lastEnemyCheckTime > enemyCheckDelay && EnemiesAlive <= 0)
         {
             isWaveComplete = true; // Mark wave as complete
             Debug.Log("Wave Complete. Show build phase UI.");
@@ -113,6 +113,8 @@ public class WaveSpawning : MonoBehaviour
         for (int i = 0; i < currentWave.count; i++)
         {
             SpawnEnemy(currentWave); // Pass the current wave to SpawnEnemy
+
+         //   currentWave.count = EnemiesAlive;
             yield return new WaitForSeconds(1f / currentWave.rate);
         }
 

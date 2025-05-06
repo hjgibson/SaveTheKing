@@ -16131,7 +16131,7 @@ MonoBehaviour:
   cooldownText: {fileID: 605335763}
   ScoreText: {fileID: 1677227320}
   GoldText: {fileID: 13980377}
-  BombcountText: {fileID: 0}
+  BombcountText: {fileID: 1878523928}
 --- !u!114 &785362107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38726,8 +38726,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 30
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
