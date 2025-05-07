@@ -136,7 +136,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosion: {fileID: 141992782820206944, guid: 008f0235f62cf1b4cb1f4292174c5dbc,
     type: 3}
-  explosionSound: {fileID: 8300000, guid: 0340458abb3cac846994918df76c658c, type: 3}
+  explosionSound: {fileID: 8300000, guid: bf837bff2100e7441b7ee66b448171d7, type: 3}
 --- !u!65 &7137729008352899980
 BoxCollider:
   m_ObjectHideFlags: 0
