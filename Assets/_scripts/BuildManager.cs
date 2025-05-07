@@ -29,7 +29,7 @@ public class BuildManager : MonoBehaviour
     private void Start()
     {
         timer = 10;
-        upgradeCost = 20;
+        upgradeCost = 100;
         //upgraded = false;
         turretToBuild = standarTurretPrefab;
         
@@ -105,7 +105,7 @@ public class BuildManager : MonoBehaviour
             {
                 PlayerStats.gold -= upgradeCost;
                 timer--;
-                upgradeCost += 20;
+                upgradeCost += 100;
                
                 //upgraded = true;
             }
