@@ -464,7 +464,7 @@ PrefabInstance:
     - target: {fileID: 4442128864192191537, guid: 56fe295c69788ca46bc8bbd24f35dc50,
         type: 3}
       propertyPath: goldamount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4442128864192191537, guid: 56fe295c69788ca46bc8bbd24f35dc50,
         type: 3}
