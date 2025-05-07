@@ -294,6 +294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6514269075822200205, guid: ef32650eba46dcc47838d9a6757a3476,
         type: 3}
+      propertyPath: slimescream
+      value: 
+      objectReference: {fileID: 8300000, guid: ff0fc863072e7a74490d9e8ddfc6548e, type: 3}
+    - target: {fileID: 6514269075822200205, guid: ef32650eba46dcc47838d9a6757a3476,
+        type: 3}
       propertyPath: startHealth
       value: 2000
       objectReference: {fileID: 0}

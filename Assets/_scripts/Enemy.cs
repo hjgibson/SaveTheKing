@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public AudioClip slimescream;
     public float speed = 10f;
     public int enemyDamage;
     public float startHealth = 100;
@@ -50,7 +51,9 @@ public class Enemy : MonoBehaviour
         GameObject effectIns = (GameObject)Instantiate(deathAnim, transform.position, transform.rotation);
         Destroy(effectIns, 0.5f);
 
+        AudioSource.PlayClipAtPoint(slimescream, transform.position);
         Destroy(gameObject);
+
         WaveSpawning.EnemiesAlive--;
 
         if (WaveSpawning.EnemiesAlive < 0)
