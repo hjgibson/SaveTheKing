@@ -473,6 +473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4442128864192191537, guid: 56fe295c69788ca46bc8bbd24f35dc50,
         type: 3}
+      propertyPath: slimescream
+      value: 
+      objectReference: {fileID: 8300000, guid: aeaaba3be93771043917c7e96ac003c5, type: 3}
+    - target: {fileID: 4442128864192191537, guid: 56fe295c69788ca46bc8bbd24f35dc50,
+        type: 3}
       propertyPath: startHealth
       value: 200
       objectReference: {fileID: 0}
@@ -526,7 +531,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8c61ecf7329086b479daf318deadcbb4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 42bb701f48d35d1498f54146dc33d6bd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.306
   m_Pitch: 1

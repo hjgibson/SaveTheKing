@@ -297,6 +297,11 @@ PrefabInstance:
       propertyPath: pointamount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6514269075822200205, guid: ef32650eba46dcc47838d9a6757a3476,
+        type: 3}
+      propertyPath: slimescream
+      value: 
+      objectReference: {fileID: 8300000, guid: aeaaba3be93771043917c7e96ac003c5, type: 3}
     - target: {fileID: 6712070137316999468, guid: ef32650eba46dcc47838d9a6757a3476,
         type: 3}
       propertyPath: m_Name
